@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080b14">
+<meta name="description" content="StimTake Chaturbate Overlay Manager for OBS — manage 20 action slots, switch decks, and run overlays through a single OBS Browser Source.">
+<title>StimTake — Chaturbate Overlay Manager for OBS</title>
+<style>
+:root{color-scheme:dark;--bg:#070a12;--panel:#0d1423;--panel2:#111b2e;--line:#263958;--blue:#35c9ff;--purple:#c44dff;--pink:#ff4dc4;--orange:#ff9b3d;--text:#f3f7ff;--muted:#a8b8d4;--green:#4ce0ad}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#24205a 0,transparent 34%),radial-gradient(ellipse at 0% 25%,#082b4a 0,transparent 32%),var(--bg);font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);line-height:1.6}a{color:inherit}.wrap{width:min(1180px,92%);margin:auto}.topbar{position:sticky;top:0;z-index:10;background:#070a12e8;backdrop-filter:blur(14px);border-bottom:1px solid #263958}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:13px 0}.brand{font-weight:900;letter-spacing:-.04em;font-size:1.25rem}.brand span{color:var(--blue)}.navlinks{display:flex;gap:20px;flex-wrap:wrap}.navlinks a{text-decoration:none;color:var(--muted);font-size:.9rem}.navlinks a:hover{color:var(--blue)}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:800;border:1px solid #41658d;background:linear-gradient(110deg,#1169b7,#5834a6);box-shadow:0 0 22px #1d91ff26}.btn.secondary{background:#101a2b;border-color:#334767}.hero{padding:54px 0 40px;display:grid;grid-template-columns:1fr 1.05fr;gap:35px;align-items:center}.eyebrow{display:inline-flex;gap:8px;align-items:center;color:#9be9ff;background:#10283b;border:1px solid #215b7c;padding:6px 11px;border-radius:99px;font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.dot{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 10px var(--green)}h1{font-size:clamp(2.5rem,5.4vw,4.8rem);line-height:.99;letter-spacing:-.055em;margin:20px 0}h1 em{font-style:normal;background:linear-gradient(90deg,var(--blue),#a48aff,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{font-size:1.12rem;color:var(--muted);max-width:600px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0}.mini-stats{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:.88rem}.mini-stats b{display:block;color:white;font-size:1.2rem}.hero-art{position:relative}.hero-art img{display:block;width:100%;height:auto;object-fit:cover;border-radius:18px;border:1px solid #376b9b;box-shadow:0 0 45px #1e85ff25}.section{padding:58px 0}.section-head{max-width:720px;margin:0 auto 30px;text-align:center}.section-head h2{font-size:clamp(1.8rem,3.2vw,2.8rem);letter-spacing:-.035em;line-height:1.1;margin:0 0 12px}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:linear-gradient(150deg,#111b2b,#0a101b);border:1px solid var(--line);border-radius:17px;padding:22px;overflow:hidden}.card .icon{width:45px;height:45px;border-radius:13px;display:grid;place-items:center;background:#132e47;border:1px solid #28648d;font-size:1.35rem;margin-bottom:15px}.card h3{margin:0 0 8px;font-size:1.1rem}.card p{color:var(--muted);margin:0;font-size:.95rem}.showcase{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}.showcase.reverse .copy{order:2}.showcase.reverse .visual{order:1}.visual{padding:10px;background:#0b1220;border:1px solid #284b70;border-radius:17px;box-shadow:0 0 30px #008aff12}.visual img{width:100%;display:block;border-radius:10px;cursor:zoom-in}.copy h2{font-size:clamp(1.8rem,3.2vw,2.6rem);line-height:1.1;letter-spacing:-.04em;margin:0 0 14px}.copy p,.copy li{color:var(--muted)}.copy ul{padding-left:20px}.tag{display:inline-block;margin:3px 5px 3px 0;padding:5px 9px;border-radius:99px;background:#151d32;border:1px solid #313f63;color:#c6d9ff;font-size:.77rem}.packs{display:grid;grid-template-columns:1fr 1fr;gap:20px}.pack{border-radius:18px;overflow:hidden;border:1px solid #4b3a7c;background:#0e1020}.pack img{width:100%;display:block;aspect-ratio:16/8;object-fit:cover}.packbody{padding:20px}.packbody h3{margin:0 0 6px}.packbody p{margin:0;color:var(--muted)}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.step{padding:18px;background:#0d1524;border:1px solid var(--line);border-radius:15px}.num{font-weight:900;font-size:1.4rem;color:var(--blue)}.step h3{margin:5px 0}.step p{font-size:.9rem;color:var(--muted);margin:0}.notice{margin-top:20px;padding:15px 17px;border:1px solid #66512d;background:#20190f;border-radius:12px;color:#ffdda8;font-size:.9rem}.cta{padding:35px;border:1px solid #365c91;border-radius:20px;background:radial-gradient(ellipse at 80% 0,#3a1e6a,transparent 50%),linear-gradient(130deg,#10253d,#0b1020);display:flex;justify-content:space-between;gap:20px;align-items:center}.cta h2{margin:0 0 6px}.cta p{margin:0;color:var(--muted)}footer{padding:30px 0;border-top:1px solid #1d2b42;color:var(--muted);font-size:.86rem}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.lightbox{display:none;position:fixed;inset:0;z-index:100;background:#000e;align-items:center;justify-content:center;padding:3vw}.lightbox.open{display:flex}.lightbox img{max-width:95vw;max-height:90vh;border-radius:12px;border:1px solid #526b8c}.lightbox button{position:absolute;top:18px;right:24px;font-size:2rem;background:#121a2a;color:white;border:1px solid #50627d;border-radius:10px;cursor:pointer;width:48px;height:48px}
+@media(max-width:850px){.hero,.showcase{grid-template-columns:1fr}.showcase.reverse .copy,.showcase.reverse .visual{order:initial}.grid{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.hero{padding-top:35px}.cta{align-items:flex-start;flex-direction:column}}
+@media(max-width:540px){.grid,.packs,.steps{grid-template-columns:1fr}.card{padding:18px}.mini-stats{gap:14px}.section{padding:42px 0}.cta{padding:24px}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="wrap nav">
+  <a class="brand" href="#top" aria-label="StimTake home">STIM<span>TAKE</span> / DECKS</a>
+  <nav class="navlinks" aria-label="Main navigation"><a href="#features">Features</a><a href="#screenshots">Screenshots</a><a href="#packs">Action packs</a><a href="#setup">Setup</a></nav>
+  <a class="btn secondary" href="https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker" target="_blank" rel="noopener">View on GitHub ↗</a>
+</div></header>
+<main id="top">
+<section class="wrap hero">
+  <div>
+    <span class="eyebrow"><span class="dot"></span> Desktop overlay toolkit</span>
+    <h1>Make your show<br><em>interactive.</em></h1>
+    <p class="lead">StimTake is a Chaturbate overlay manager for OBS with 20 action slots, switchable decks, themed HTML overlays, and one persistent Browser Source for your scene.</p>
+    <div class="actions"><a class="btn" href="https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker" target="_blank" rel="noopener">Explore the project ↗</a><a class="btn secondary" href="#setup">See quick setup ↓</a></div>
+    <div class="mini-stats"><div><b>20</b> configurable slots</div><div><b>2</b> included action packs</div><div><b>1</b> OBS Browser Source</div></div>
+  </div>
+  <div class="hero-art"><img src="assets/stimtake-promo-banner.png" alt="StimTake promotional banner showing the overlay manager, Halloween actions, and OBS integration"></div>
+</section>
+<section class="section" id="features"><div class="wrap">
+  <div class="section-head"><h2>Control the show from one place</h2><p>Organize your actions, configure trigger ranges, and test overlays before using them live.</p></div>
+  <div class="grid">
+    <article class="card"><div class="icon">▦</div><h3>20 action slots</h3><p>Enable or disable actions, configure token ranges, add optional message matching, and test individual slots.</p></article>
+    <article class="card"><div class="icon">◈</div><h3>Switchable decks</h3><p>Choose a themed pack, save custom decks, and keep your show setup organized.</p></article>
+    <article class="card"><div class="icon">✦</div><h3>Queue-aware playback</h3><p>The documented overlay page queues actions so they play one at a time, with stop and clear-queue controls.</p></article>
+    <article class="card"><div class="icon">▣</div><h3>OBS Browser Source</h3><p>Use one persistent local overlay page rather than adding a separate Browser Source for every action.</p></article>
+    <article class="card"><div class="icon">⌘</div><h3>Local-first workflow</h3><p>The project is designed to run locally on Windows with a local dashboard and bridge.</p></article>
+    <article class="card"><div class="icon">⚙</div><h3>Test and troubleshoot</h3><p>Use the included build/test helpers and verify your room connection and overlay rendering before going live.</p></article>
+  </div>
+</div></section>
+<section class="section" id="screenshots"><div class="wrap">
+  <div class="section-head"><h2>Real screens. Real workflow.</h2><p>These images are from the supplied Windows and OBS screenshots, paired with the promotional artwork.</p></div>
+  <div class="showcase">
+    <div class="visual"><img class="zoomable" src="assets/real-decks-dashboard.png" alt="Actual StimTake Decks dashboard with Halloween action slots and deck management"></div>
+    <div class="copy"><span class="tag">DASHBOARD</span><span class="tag">20 ACTIONS</span><h2>Switch decks and manage actions</h2><p>The Decks interface shows the current deck, click-to-run mode, action assignments, and deck backup/restore tools. Select the actions and settings that fit your show.</p><ul><li>Halloween deck and other themes</li><li>Individual action slot management</li><li>Deck save and restore controls</li></ul></div>
+  </div>
+  <div class="showcase reverse" style="margin-top:34px">
+    <div class="visual"><img class="zoomable" src="assets/real-obs-browser-source.png" alt="Actual OBS Browser Source properties with local overlay URL, 1920 by 1080 dimensions, and transparent CSS"></div>
+    <div class="copy"><span class="tag">OBS INTEGRATION</span><span class="tag">1920 × 1080</span><h2>One source for your overlays</h2><p>Your supplied OBS properties screenshot shows a transparent Browser Source configured at 1920 × 1080. Use the exact local URL configured for your installed version.</p><div class="notice">Your screenshot shows port 8790 at <code>http://127.0.0.1:8790/obs.html</code>. The repository README describes a bridge using port 8788 and <code>index.html</code>. These may be different app versions or configurations—verify the active URL in your running dashboard.</div></div>
+  </div>
+  <div class="showcase" style="margin-top:34px">
+    <div class="visual"><img class="zoomable" src="assets/windows-stimtake-search.png" alt="Windows Start search showing StimTake application and related build files"></div>
+    <div class="copy"><span class="tag">WINDOWS DESKTOP</span><h2>Built for a local workflow</h2><p>The Windows screenshot shows StimTake alongside its build outputs. Follow the repository's current README and build scripts for the version you're installing.</p><p>Click any screenshot to enlarge it.</p></div>
+  </div>
+</div></section>
+<section class="section" id="packs"><div class="wrap">
+  <div class="section-head"><h2>Choose your action pack</h2><p>Use the included themes as a starting point, then customize your setup.</p></div>
+  <div class="packs">
+    <article class="pack"><img src="assets/stimtake-promo-banner.png" alt="Halloween-themed StimTake overlays and action dashboard"><div class="packbody"><h3>Halloween 2026</h3><p>Spooky wheels, dice, pumpkins, potions, ghosts, slots, and other themed actions. The repository README describes Halloween as the preselected deck in its documented build.</p></div></article>
+    <article class="pack"><img src="assets/daily-pack-banner.png" alt="Neon blue and purple StimTake Daily Pack artwork showing 20 everyday interactive actions and OBS integration"><div class="packbody"><h3>Daily Pack</h3><p>A second set of 20 themed actions for everyday shows, including spin, dice, cards, and other playful interactions.</p></div></article>
+  </div>
+</div></section>
+<section class="section" id="setup"><div class="wrap">
+  <div class="section-head"><h2>Quick-start overview</h2><p>Check the repository README for the authoritative instructions for your current build.</p></div>
+  <div class="steps">
+    <article class="step"><div class="num">01</div><h3>Build and test</h3><p>On Windows, follow the current repository instructions and run the provided build/test helper.</p></article>
+    <article class="step"><div class="num">02</div><h3>Start the app</h3><p>Launch StimTake and open its local dashboard. Keep the local service running while using the overlay.</p></article>
+    <article class="step"><div class="num">03</div><h3>Configure actions</h3><p>Choose a deck, review the slot settings, set your model/room as required, and test each action.</p></article>
+    <article class="step"><div class="num">04</div><h3>Add to OBS</h3><p>Add one Browser Source using the URL shown by your running version and confirm the overlay renders.</p></article>
+  </div>
+  <div class="notice">Live tip detection and OBS rendering need end-to-end testing in your own environment. A successful local smoke test alone does not prove live Chaturbate tip events are arriving.</div>
+</div></section>
+<section class="section"><div class="wrap"><div class="cta"><div><h2>Explore the source and setup instructions</h2><p>Check the latest README, build helpers, and project status on GitHub.</p></div><a class="btn" href="https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker" target="_blank" rel="noopener">Open GitHub repository ↗</a></div></div></section>
+</main>
+<footer><div class="wrap foot"><span>© StimTake — Chaturbate Overlay Manager for OBS</span><span>Independent project. Chaturbate and OBS are respective third-party trademarks.</span></div></footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Expanded screenshot"><button type="button" id="closeLightbox" aria-label="Close image">×</button><img id="lightboxImage" alt=""></div>
+<script>
+(()=>{const box=document.getElementById('lightbox'),big=document.getElementById('lightboxImage');document.querySelectorAll('.zoomable').forEach(img=>img.addEventListener('click',()=>{big.src=img.src;big.alt=img.alt;box.classList.add('open')}));function close(){box.classList.remove('open');big.src=''}document.getElementById('closeLightbox').addEventListener('click',close);box.addEventListener('click',e=>{if(e.target===box)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()})})();
+</script>
+</body>
+</html>
