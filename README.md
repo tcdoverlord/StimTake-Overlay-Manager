@@ -1,5 +1,4 @@
 <div align="center">
-  <img src="./assets/stimtake-logo.png" alt="StimTake logo" width="150">
 
   # StimTake — Chaturbate Overlay Manager for OBS
 
@@ -53,20 +52,12 @@ StimTake is actively evolving. Features and packaging can vary by build. Check t
 ### Halloween 2026
 
 <p align="center">
-  <a href="https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/blob/main/assets/halloween-2026-banner.png">
-    <img src="./assets/halloween-2026-banner.png" alt="StimTake Halloween 2026 action pack" width="100%">
+  <a href="https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/blob/main/assets/stimtake-promo-banner.png">
+    <img src="./assets/stimtake-promo-banner.png" alt="StimTake Halloween 2026 action pack" width="100%">
   </a>
 </p>
 
 A seasonal set of spooky themed interactions. The available actions and artwork depend on the installed Halloween pack version.
-
-### Daily Pack
-
-<p align="center">
-  <a href="https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/blob/main/assets/daily-pack-banner.png">
-    <img src="./assets/daily-pack-banner.png" alt="StimTake Daily Pack action pack" width="100%">
-  </a>
-</p>
 
 A set of everyday interactive actions, including wheel spins, dice, cards, mystery prizes, races, and other game-style overlays. The included pack and installed build determine the available actions.
 
