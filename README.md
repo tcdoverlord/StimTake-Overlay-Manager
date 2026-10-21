@@ -1,6 +1,6 @@
 ﻿ <div align="center">
 
-# StimTake â€” Chaturbate Overlay Manager for OBS
+# StimTake ΓÇö Chaturbate Overlay Manager for OBS
 
 **A Windows toolkit for interactive OBS overlays, tip tracking, and customizable action packs.**
 
@@ -8,7 +8,7 @@
 ![OBS](https://img.shields.io/badge/Integration-OBS%20Studio-7b61ff?style=for-the-badge)
 ![Actions](https://img.shields.io/badge/Interactive%20Actions-20-00b8d9?style=for-the-badge)
 
-**[ðŸŒ Project Website](https://tcdoverlord.github.io/StimTake-Overlay-Manager/)** Â· **[ðŸ“¦ GitHub Repository](https://github.com/tcdoverlord/StimTake-Overlay-Manager)** Â· **[ðŸ› Report an Issue](https://github.com/tcdoverlord/StimTake-Overlay-Manager/issues)**
+**[≡ƒîÉ Project Website](https://tcdoverlord.github.io/StimTake-Overlay-Manager/)** ┬╖ **[≡ƒôª GitHub Repository](https://github.com/tcdoverlord/StimTake-Overlay-Manager)** ┬╖ **[≡ƒÉ¢ Report an Issue](https://github.com/tcdoverlord/StimTake-Overlay-Manager/issues)**
 
 </div>
 
@@ -84,7 +84,7 @@ Requirements can vary by release.
 
 ### 1. Get StimTake
 
-**Recommended — install StimTake:** [⬇️ Download StimTake for Windows](https://github.com/tcdoverlord/StimTake-Overlay-Manager/releases/latest/download/StimTake-Setup-1.0.0.exe). Download `StimTake-Setup-1.0.0.exe`, run it, and follow the setup wizard. The installer includes the application and bundled resources.
+**Recommended — install StimTake:** [Download StimTake for Windows](https://github.com/tcdoverlord/StimTake-Overlay-Manager/releases/latest/download/StimTake-Setup-1.0.0.exe). Download StimTake-Setup-1.0.0.exe, run it, and follow the setup wizard.
 
 You can also visit the [Releases page](https://github.com/tcdoverlord/StimTake-Overlay-Manager/releases) to review release notes. Developers who want the source can clone the repository:
 
@@ -97,7 +97,7 @@ Review the included documentation and verify the version before running executab
 
 ### 2. Launch the application
 
-For a packaged Windows release, run `StimTake-Setup-1.0.0.exe` and follow the setup wizard. You can also get the installer from the [latest GitHub release](https://github.com/tcdoverlord/StimTake-Overlay-Manager/releases/latest).
+For a packaged Windows release, run the supplied installer or executable and follow the instructions included with that release.
 
 For source builds, follow the repository's build instructions and scripts.
 
@@ -184,8 +184,8 @@ When reporting a problem, include the StimTake version, Windows version, relevan
 ## Project Links
 
 - **Repository:** https://github.com/tcdoverlord/StimTake-Overlay-Manager
-- **⬇️ Download for Windows:** https://github.com/tcdoverlord/StimTake-Overlay-Manager/releases/latest/download/StimTake-Setup-1.0.0.exe
-- **Releases and release notes:** https://github.com/tcdoverlord/StimTake-Overlay-Manager/releases
+- **Download for Windows:** https://github.com/tcdoverlord/StimTake-Overlay-Manager/releases/latest/download/StimTake-Setup-1.0.0.exe
+- **Releases:** https://github.com/tcdoverlord/StimTake-Overlay-Manager/releases
 - **Issues:** https://github.com/tcdoverlord/StimTake-Overlay-Manager/issues
 - **Project website:** https://tcdoverlord.github.io/StimTake-Overlay-Manager/
 - **Maintainer:** https://github.com/tcdoverlord
@@ -203,3 +203,4 @@ Review the license files and notices in the repository and included dependencies
 *Interactive actions. Custom decks. OBS-ready workflows.*
 
 </div>
+
