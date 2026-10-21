@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "juneteenth_pack",
+  "name": "Juneteenth Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Freedom Wheel",
+      "file": "01_Freedom_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Juneteenth Stars",
+      "file": "02_Juneteenth_Stars_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Heritage Reveal",
+      "file": "03_Heritage_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Red Green Black",
+      "file": "04_Red_Green_Black_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Freedom Flag",
+      "file": "05_Freedom_Flag_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "History Journey",
+      "file": "06_History_Journey_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Unity Puzzle",
+      "file": "07_Unity_Puzzle_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Culture Treasure",
+      "file": "08_Culture_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Legacy Lights",
+      "file": "09_Legacy_Lights_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Joyful Rhythm",
+      "file": "10_Joyful_Rhythm_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Community Roots",
+      "file": "11_Community_Roots_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Freedom Story",
+      "file": "12_Freedom_Story_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Hope Rising",
+      "file": "13_Hope_Rising_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Celebration Spin",
+      "file": "14_Celebration_Spin_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Heritage Pick",
+      "file": "15_Heritage_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Together We Rise",
+      "file": "16_Together_We_Rise_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Liberty Lantern",
+      "file": "17_Liberty_Lantern_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Future Forward",
+      "file": "18_Future_Forward_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Freedom Dreams",
+      "file": "19_Freedom_Dreams_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Juneteenth Finale",
+      "file": "20_Juneteenth_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

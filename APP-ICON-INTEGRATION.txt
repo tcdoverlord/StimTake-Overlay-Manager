@@ -1,0 +1,14 @@
+StimTake launch icon integration
+================================
+
+Icon source: StimTake-Rust-UI-Concept-Build\assets\StimTake.ico
+
+Included integration:
+- Windows resource build script (build.rs + StimTake.rc) embeds the icon in StimTake.exe when rc.exe (MSVC) or windres (GNU) is available.
+- Inno Setup uses the icon for the installer and installed Start Menu/Desktop shortcuts.
+- Installer copies StimTake.ico into the app install folder.
+
+Build: run BUILD-WINDOWS-RELEASE.cmd on Windows with Rust and Inno Setup installed.
+Verify: inspect the rebuilt EXE, setup wizard icon, Start Menu shortcut, and optional desktop shortcut.
+
+This is a candidate package. The existing EXE and installer in the archive are reference binaries; rebuild to incorporate the icon. Live OBS/runtime validation is still required.

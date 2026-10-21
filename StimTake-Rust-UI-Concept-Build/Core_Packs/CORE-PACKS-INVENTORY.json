@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "library": "StimTake Core Packs",
+  "packs": [
+    {
+      "folder": "Daily_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Easter_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Fall_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Halloween",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Independence_Day_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Indigenous_Peoples_Day_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Juneteenth_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Labor_Day_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "MLK_Day_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Memorial_Day_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "New_Years_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Presidents_Day_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Spring_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "St_Patricks_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Summer_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Valentines_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Veterans_Day_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    },
+    {
+      "folder": "Winter_Pack",
+      "html_overlays": 20,
+      "has_deck_json": true,
+      "has_readme": true
+    }
+  ]
+}

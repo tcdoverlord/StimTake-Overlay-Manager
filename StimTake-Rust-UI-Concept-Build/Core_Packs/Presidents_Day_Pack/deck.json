@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "presidents_day_pack",
+  "name": "Presidents' Day Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Founders Wheel",
+      "file": "01_Founders_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Liberty Bell",
+      "file": "02_Liberty_Bell_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "History Mystery",
+      "file": "03_History_Mystery_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Presidential Portrait",
+      "file": "04_Presidential_Portrait_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Star Banner",
+      "file": "05_Star_Banner_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Leadership Pick",
+      "file": "06_Leadership_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Capitol Challenge",
+      "file": "07_Capitol_Challenge_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Patriot Puzzle",
+      "file": "08_Patriot_Puzzle_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Legacy Reveal",
+      "file": "09_Legacy_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "White House Wheel",
+      "file": "10_White_House_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Freedom Facts",
+      "file": "11_Freedom_Facts_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Monument Mystery",
+      "file": "12_Monument_Mystery_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Eagle Flight",
+      "file": "13_Eagle_Flight_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Civic Stars",
+      "file": "14_Civic_Stars_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "American Story",
+      "file": "15_American_Story_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Honor Roll",
+      "file": "16_Honor_Roll_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Great Leaders",
+      "file": "17_Great_Leaders_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "History Treasure",
+      "file": "18_History_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Liberty Lights",
+      "file": "19_Liberty_Lights_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Presidents Finale",
+      "file": "20_Presidents_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

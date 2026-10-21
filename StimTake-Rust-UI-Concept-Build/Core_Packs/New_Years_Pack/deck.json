@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "new_years_pack",
+  "name": "New Year's Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Countdown Wheel",
+      "file": "01_Countdown_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Midnight Mystery",
+      "file": "02_Midnight_Mystery_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Confetti Burst",
+      "file": "03_Confetti_Burst_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Golden Resolution",
+      "file": "04_Golden_Resolution_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Champagne Pop",
+      "file": "05_Champagne_Pop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "New Year Numbers",
+      "file": "06_New_Year_Numbers_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Firework Finale",
+      "file": "07_Firework_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Clock Strike",
+      "file": "08_Clock_Strike_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Lucky Year Draw",
+      "file": "09_Lucky_Year_Draw_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Star Shower",
+      "file": "10_Star_Shower_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Fresh Start Pick",
+      "file": "11_Fresh_Start_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Resolution Reveal",
+      "file": "12_Resolution_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Sparkler Spin",
+      "file": "13_Sparkler_Spin_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Midnight Dice",
+      "file": "14_Midnight_Dice_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Glitter Drop",
+      "file": "15_Glitter_Drop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "New Year Treasure",
+      "file": "16_New_Year_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Balloon Countdown",
+      "file": "17_Balloon_Countdown_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Golden Hour",
+      "file": "18_Golden_Hour_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Year Ahead",
+      "file": "19_Year_Ahead_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Midnight Finale",
+      "file": "20_Midnight_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

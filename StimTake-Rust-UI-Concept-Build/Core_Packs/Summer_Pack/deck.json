@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "summer_pack",
+  "name": "Summer Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Beach Ball Bounce",
+      "file": "01_Beach_Ball_Bounce_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Sunglasses Reveal",
+      "file": "02_Sunglasses_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Sunshine Spin",
+      "file": "03_Sunshine_Spin_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Poolside Pick",
+      "file": "04_Poolside_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Tropical Treasure",
+      "file": "05_Tropical_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Watermelon Drop",
+      "file": "06_Watermelon_Drop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Ice Cream Surprise",
+      "file": "07_Ice_Cream_Surprise_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Flip-Flop Race",
+      "file": "08_Flip_Flop_Race_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Surfboard Showdown",
+      "file": "09_Surfboard_Showdown_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Lemonade Stand",
+      "file": "10_Lemonade_Stand_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Sandcastle Build",
+      "file": "11_Sandcastle_Build_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Seashell Search",
+      "file": "12_Seashell_Search_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Firefly Flight",
+      "file": "13_Firefly_Flight_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Campfire Stories",
+      "file": "14_Campfire_Stories_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Road Trip Roulette",
+      "file": "15_Road_Trip_Roulette_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Palm Tree Pick",
+      "file": "16_Palm_Tree_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Heatwave Jackpot",
+      "file": "17_Heatwave_Jackpot_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Cool Down Splash",
+      "file": "18_Cool_Down_Splash_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Summer Stars",
+      "file": "19_Summer_Stars_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Sunset Finale",
+      "file": "20_Sunset_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}
