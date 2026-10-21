@@ -8,7 +8,7 @@
   ![OBS](https://img.shields.io/badge/Integration-OBS%20Studio-7b61ff?style=for-the-badge)
   ![Actions](https://img.shields.io/badge/Interactive%20Actions-20-00b8d9?style=for-the-badge)
 
-  **[🌐 Project Website](https://tcdoverlord.github.io/Chaturbate-OBS-Tip-Tracker/)** · **[📦 GitHub Repository](https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker)** · **[🐛 Report an Issue](https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/issues)**
+  **[🌐 Project Website](https://tcdoverlord.github.io/StimTake-Overlay-Manager/)** · **[📦 GitHub Repository](https://github.com/tcdoverlord/StimTake-Overlay-Manager)** · **[🐛 Report an Issue](https://github.com/tcdoverlord/StimTake-Overlay-Manager/issues)**
 
 </div>
 
