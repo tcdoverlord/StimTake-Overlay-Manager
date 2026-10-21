@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "winter_pack",
+  "name": "Winter Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Snowflake Spin",
+      "file": "01_Snowflake_Spin_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Mittens Mystery",
+      "file": "02_Mittens_Mystery_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Frosty Treasure",
+      "file": "03_Frosty_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Snowball Toss",
+      "file": "04_Snowball_Toss_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Hot Cocoa Bonus",
+      "file": "05_Hot_Cocoa_Bonus_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Ice Crystal Pick",
+      "file": "06_Ice_Crystal_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Sled Race",
+      "file": "07_Sled_Race_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Aurora Reveal",
+      "file": "08_Aurora_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Snow Globe Surprise",
+      "file": "09_Snow_Globe_Surprise_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Winter Star",
+      "file": "10_Winter_Star_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Cozy Cabin Draw",
+      "file": "11_Cozy_Cabin_Draw_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Penguin Parade",
+      "file": "12_Penguin_Parade_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Frozen Fortune",
+      "file": "13_Frozen_Fortune_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Ski Slope Dash",
+      "file": "14_Ski_Slope_Dash_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Icicle Drop",
+      "file": "15_Icicle_Drop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Frosty Dice",
+      "file": "16_Frosty_Dice_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Snow Angel",
+      "file": "17_Snow_Angel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Northern Lights",
+      "file": "18_Northern_Lights_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Winter Wishes",
+      "file": "19_Winter_Wishes_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Winter Finale",
+      "file": "20_Winter_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

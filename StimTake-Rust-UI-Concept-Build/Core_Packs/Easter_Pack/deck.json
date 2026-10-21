@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "easter_pack",
+  "name": "Easter Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Egg Hunt",
+      "file": "01_Egg_Hunt_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Pastel Wheel",
+      "file": "02_Pastel_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Bunny Hop",
+      "file": "03_Bunny_Hop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Chick Surprise",
+      "file": "04_Chick_Surprise_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Jellybean Jar",
+      "file": "05_Jellybean_Jar_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Carrot Dash",
+      "file": "06_Carrot_Dash_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Basket of Treats",
+      "file": "07_Basket_of_Treats_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Egg Paint Reveal",
+      "file": "08_Egg_Paint_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Spring Basket",
+      "file": "09_Spring_Basket_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Chocolate Surprise",
+      "file": "10_Chocolate_Surprise_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Hidden Egg",
+      "file": "11_Hidden_Egg_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Tulip Treasure",
+      "file": "12_Tulip_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Bunny Trail",
+      "file": "13_Bunny_Trail_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Pastel Pick",
+      "file": "14_Pastel_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Egg Roll Race",
+      "file": "15_Egg_Roll_Race_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Marshmallow Drop",
+      "file": "16_Marshmallow_Drop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Easter Bonnet",
+      "file": "17_Easter_Bonnet_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Rainbow Egg",
+      "file": "18_Rainbow_Egg_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Garden Surprise",
+      "file": "19_Garden_Surprise_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Easter Finale",
+      "file": "20_Easter_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

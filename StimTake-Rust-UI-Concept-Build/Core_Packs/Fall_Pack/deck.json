@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "fall_pack",
+  "name": "Fall Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Autumn Leaf Drop",
+      "file": "01_Autumn_Leaf_Drop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Apple Orchard Pick",
+      "file": "02_Apple_Orchard_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Harvest Wheel",
+      "file": "03_Harvest_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Cider Surprise",
+      "file": "04_Cider_Surprise_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Cozy Sweater Reveal",
+      "file": "05_Cozy_Sweater_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Acorn Hunt",
+      "file": "06_Acorn_Hunt_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Pumpkin Patch",
+      "file": "07_Pumpkin_Patch_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Corn Maze Dash",
+      "file": "08_Corn_Maze_Dash_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Scarecrow Shuffle",
+      "file": "09_Scarecrow_Shuffle_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Maple Magic",
+      "file": "10_Maple_Magic_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Bonfire Bonus",
+      "file": "11_Bonfire_Bonus_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Golden Hour Spin",
+      "file": "12_Golden_Hour_Spin_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Hayride Race",
+      "file": "13_Hayride_Race_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Harvest Basket",
+      "file": "14_Harvest_Basket_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Crisp Air Challenge",
+      "file": "15_Crisp_Air_Challenge_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Pecan Prize",
+      "file": "16_Pecan_Prize_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Falling Leaves",
+      "file": "17_Falling_Leaves_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Autumn Treasure",
+      "file": "18_Autumn_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Cozy Cabin",
+      "file": "19_Cozy_Cabin_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Fall Finale",
+      "file": "20_Fall_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

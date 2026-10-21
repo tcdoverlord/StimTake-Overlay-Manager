@@ -1,0 +1,23 @@
+StimTake Built-in Deck / Card / Overlay Link Fix Candidate
+=========================================================
+
+Scope
+-----
+- The original locked main package is not modified.
+- Built-in deck cards now hydrate from Core_Packs/*/deck.json through GET /api/packs.
+- The pack endpoint only returns manifests with exactly 20 slots and all 20 referenced HTML files present.
+- Fixed the nested Core_Packs URL calculation so packaged overlay URLs can resolve when Core_Packs is inside StimTake-Rust-UI-Concept-Build.
+- Added the missing Daily_Pack/deck.json and README.
+- Added TEST-CORE-PACK-INTEGRITY.ps1 to validate every pack folder.
+- No runtime limits, queue policy, Stop behavior, or memory-pressure rules were intentionally changed.
+
+Build
+-----
+1. Extract the ZIP into a new folder.
+2. Run BUILD-WINDOWS-RELEASE.cmd from the package root.
+3. Run TEST-CORE-PACK-INTEGRITY.ps1 from the package root in PowerShell.
+4. Test each built-in deck: confirm all 20 cards show assigned filenames and that each card's /packs/... URL loads in a browser and OBS.
+
+Important
+---------
+This is a source candidate, not a verified Windows executable. Build and live OBS validation are still required before promotion to MAIN.

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "daily_pack",
+  "name": "Daily Pack",
+  "type": "OVERLAY_PACK",
+  "category": "Daily",
+  "version": "1.0.0",
+  "overlayCount": 20,
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Spin The Wheel",
+      "file": "Daily-Pack-01-Spin-The-Wheel-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Lucky Dice",
+      "file": "Daily-Pack-02-Lucky-Dice-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Mystery Box",
+      "file": "Daily-Pack-03-Mystery-Box-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Pick A Card",
+      "file": "Daily-Pack-04-Pick-A-Card-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Lucky Slots",
+      "file": "Daily-Pack-05-Lucky-Slots-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Time Jackpot",
+      "file": "Daily-Pack-06-Time-Jackpot-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Emoji Race",
+      "file": "Daily-Pack-07-Emoji-Race-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Cup Shuffle",
+      "file": "Daily-Pack-08-Cup-Shuffle-Adult-Wins-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Bullseye Reward Reveal",
+      "file": "Daily-Pack-09-Bullseye-Reward-Reveal-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Pick A Gem",
+      "file": "Daily-Pack-10-Pick-A-Gem-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Balloon Pop",
+      "file": "Daily-Pack-11-Balloon-Pop-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Lucky Locker",
+      "file": "Daily-Pack-12-Lucky-Locker-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Mystery Tiles",
+      "file": "Daily-Pack-13-Mystery-Tiles-Fixed-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Rocket Launch",
+      "file": "Daily-Pack-14-Rocket-Launch-Adult-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Treasure Chest",
+      "file": "Daily-Pack-15-Treasure-Chest-Final-Top-Reveal-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Lucky Strike",
+      "file": "Daily-Pack-16-Lucky-Strike-Adult-Prizes-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Lucky Shot",
+      "file": "Daily-Pack-17-Lucky-Shot-True-Net-Entry-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Star Pick",
+      "file": "Daily-Pack-18-Star-Pick-Adult-Prizes-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Mini Race",
+      "file": "Daily-Pack-19-Mini-Race-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Final Showdown",
+      "file": "Daily-Pack-20-Final-Showdown-overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Built-in 20-overlay Daily Pack. Filenames are mapped to the packaged HTML files in this folder."
+}

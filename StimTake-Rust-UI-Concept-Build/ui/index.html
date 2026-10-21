@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StimTake — Deck Switcher</title>
+<style>
+:root{color-scheme:dark;--bg:#0a0d13;--panel:#111722;--line:#2a3547;--text:#edf3ff;--muted:#91a0b5;--blue:#5798ff;--green:#50d6a1;--amber:#ffc66f;--red:#ff7782}
+*{box-sizing:border-box}body{margin:0;padding:15px;background:radial-gradient(ellipse at top,#16233b 0,#0a0d13 54%);font:14px/1.45 Segoe UI,Inter,system-ui,sans-serif;color:var(--text)}
+.app{max-width:1100px;margin:auto}.top{display:flex;align-items:center;gap:12px;margin-bottom:14px}.logo{width:43px;height:43px;border-radius:12px;background:#162b49;border:1px solid #355783;display:grid;place-items:center;font-weight:900;color:#c6ddff}.top h1{font-size:19px;margin:0}.muted{color:var(--muted);font-size:12px}.ready{margin-left:auto;border:1px solid #285a48;background:#10251f;color:var(--green);border-radius:99px;padding:5px 9px;font-size:10px;font-weight:800}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:13px}.panel{background:linear-gradient(180deg,#111722,#0f141d);border:1px solid var(--line);border-radius:14px;padding:14px;min-width:0;box-shadow:0 12px 32px #0002}.head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.head h2{font-size:14px;margin:0}.small{font-size:11px;color:var(--muted)}
+.deck-tools{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:end;padding:11px;border:1px solid #2b3a50;background:#0d131d;border-radius:11px;margin-bottom:12px}.field{display:grid;gap:5px;min-width:0}.field label{color:#b7c5d9;font-size:10px;font-weight:800;letter-spacing:.4px}.field input,.field select{width:100%;background:#0b1018;border:1px solid #344157;color:var(--text);padding:9px 10px;border-radius:8px;min-width:0}
+.btn{border:1px solid #34435a;border-radius:8px;padding:8px 10px;color:var(--text);background:#192333;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}.btn:hover{border-color:#628bc9}.btn.primary{background:#1c4c91;border-color:#3f7cd0}.btn.danger{background:#381b26;border-color:#713545;color:#ffbdc2}.btn.smallbtn{padding:6px 8px;font-size:11px}
+.activation-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 11px;margin-bottom:10px;border:1px solid #713545;background:#21131a;border-radius:10px}.activation-bar.enabled{border-color:#287956;background:#10271f}.activation-copy{min-width:0}.activation-title{font-weight:850;font-size:12px}.activation-note{font-size:10px;color:var(--muted);margin-top:2px}.mode-btn{border:1px solid #a44755;background:#4a202a;color:#ffdce0;border-radius:8px;padding:9px 12px;font-weight:850;font-size:11px;cursor:pointer;white-space:nowrap}.activation-bar.enabled .mode-btn{background:#145b40;border-color:#39b77e;color:#d7ffeb}.deck{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}.slot{min-height:72px;text-align:left;background:linear-gradient(160deg,#17202d,#121923);border:1px solid #2b394d;border-left:4px solid #34445a;border-radius:9px;padding:8px;color:var(--text);cursor:pointer;min-width:0;transition:background .14s,border-color .14s,transform .14s}.slot:hover{border-color:#628bc9;transform:translateY(-1px)}.slot.active{border-color:#2b394d;border-left-color:#34445a;background:linear-gradient(160deg,#17202d,#121923);box-shadow:none}.slot.sel{outline:1px solid #8bb8ff}.slot-state{font-size:9px;font-weight:850;letter-spacing:.5px;color:var(--muted)}.deck.click-mode-on .slot:not(.active){background:linear-gradient(160deg,#29171d,#191218);border-color:#63313a;border-left-color:#d94b58}.deck.click-mode-on .slot:not(.active):hover{border-color:#ff7c86}.deck.click-mode-on .slot:not(.active) .slot-state{color:#ff929a}.deck.click-mode-on .slot.active{border-color:#2e9d75!important;border-left-color:#35e09b!important;background:linear-gradient(160deg,#123f30,#102a22)!important;box-shadow:inset 0 0 0 1px #1b6b4c88,0 0 0 1px #35e09b33!important}.deck.click-mode-on .slot.active .slot-state{color:#66f0b4!important}.deck.click-mode-on .slot.active .slot-top{color:#9ff5d1!important}.slot.active .slot-state{color:#66f0b4}.slot-top{display:flex;justify-content:space-between;color:#9eb9df;font-size:10px;font-weight:800}.slot-name{display:block;font-weight:750;font-size:12px;margin:7px 0 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.slot-state{font-size:10px;color:var(--muted)}
+.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.rule{border:0;border-top:1px solid var(--line);margin:14px 0}.section{padding:11px;border:1px solid #2c3a50;border-radius:11px;background:#0d131d;margin-top:10px}.section h3{font-size:13px;margin:0 0 6px}.section p{margin:0 0 10px}.slot-edit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}.tag{display:inline-block;font-size:9px;font-weight:800;letter-spacing:.4px;color:#a8c9ff;border:1px solid #35547e;background:#13243b;padding:3px 6px;border-radius:5px}.status{display:flex;align-items:center;gap:8px;border:1px solid #285342;background:#0d1d19;padding:9px;border-radius:8px;margin-top:10px}.led{width:7px;height:7px;background:var(--green);border-radius:50%;flex-shrink:0}.status span{font-size:11px}.deck-list{display:grid;gap:7px}.deck-card{display:flex;align-items:center;gap:9px;border:1px solid #2b394d;background:#101824;border-radius:9px;padding:9px;cursor:pointer}.deck-card.selected{border-color:var(--blue);background:#122039}.deck-emoji{width:32px;height:32px;display:grid;place-items:center;border-radius:8px;background:#19283e;font-size:17px}.deck-info{min-width:0;flex:1}.deck-name{font-size:12px;font-weight:750}.deck-meta{font-size:10px;color:var(--muted)}.deck-count{font-size:10px;color:#aac8f3}.tip{font-size:11px;color:var(--muted);line-height:1.5}.preset-buttons{display:flex;gap:6px;flex-wrap:wrap}.preset{border:1px solid #35465f;background:#121d2b;color:#cbdcff;border-radius:7px;padding:7px 8px;font-size:11px;cursor:pointer}.preset:hover{border-color:#6898df}.footer-note{font-size:10px;color:#708097;text-align:center;margin-top:10px}.section.accordion{padding:0;overflow:hidden}.my-decks-accordion{margin-top:0}.my-decks-accordion>summary{padding:13px!important}.section.accordion>summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:11px;font-size:12px;font-weight:800;user-select:none}.section.accordion>summary::-webkit-details-marker{display:none}.section.accordion>summary:after{content:"＋";color:#8eb8f5;font-size:16px;line-height:1}.section.accordion[open]>summary:after{content:"−"}.accordion-body{padding:0 11px 11px}.accordion-body>.actions:first-child{margin-top:0}.my-deck-actions{margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+@media(max-width:850px){.layout{grid-template-columns:1fr}.deck{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:520px){body{padding:6px}.app{max-width:100%}.panel{padding:8px}.deck{grid-template-columns:repeat(2,minmax(0,1fr));gap:6px}.slot{min-height:68px;padding:7px}.deck-tools{grid-template-columns:1fr}.slot-edit{grid-template-columns:1fr}.top{gap:8px}.top h1{font-size:16px}.muted{font-size:11px}.actions{gap:5px}.btn{padding:7px 8px}}
+
+.api-panel{margin-top:13px}.api-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:9px}
+.api-import{display:flex;align-items:center;gap:10px;padding:11px;background:#0d131d;border:1px solid #2c3a50;border-radius:10px;cursor:pointer;color:var(--text);text-align:left;min-width:0}
+.api-import:hover{border-color:#5e8fd9}.api-import-icon{width:35px;height:35px;display:grid;place-items:center;background:#172438;border:1px solid #354965;border-radius:9px;font-size:18px;flex-shrink:0}
+.api-import strong{display:block;font-size:12px}.api-import small{display:block;color:var(--muted);font-size:10px;margin-top:3px}.api-list{display:grid;gap:8px;margin-top:10px}
+.api-empty{padding:12px;text-align:center;border:1px dashed #34435a;border-radius:9px;color:var(--muted);font-size:11px}
+.api-card{border:1px solid #2b394d;background:#101824;border-radius:10px;padding:10px}.api-card-head{display:flex;gap:8px;align-items:flex-start}.api-card-info{flex:1;min-width:0}.api-card-name{font-size:12px;font-weight:750;overflow-wrap:anywhere}.api-card-file{font-size:10px;color:var(--muted);margin-top:3px;overflow-wrap:anywhere}.api-status{font-size:9px;font-weight:850;letter-spacing:.5px;color:var(--muted)}.api-status.running{color:var(--green)}.api-status.paused{color:var(--amber)}
+.api-buttons{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}.api-buttons .btn{padding:6px 8px;font-size:10px}.api-key{display:flex;gap:7px;align-items:center;margin-top:9px}.api-key input[type=password],.api-key input[type=text]{flex:1;min-width:0;background:#0b1018;border:1px solid #344157;color:var(--text);padding:7px 8px;border-radius:7px;font-size:11px}.api-key label{display:flex;gap:4px;align-items:center;color:var(--muted);font-size:10px;white-space:nowrap}.api-hint{font-size:10px;color:var(--muted);margin-top:5px}.api-head-right{display:flex;gap:6px;align-items:center}
+@media(max-width:520px){.api-grid{grid-template-columns:1fr}}
+
+</style></head>
+<body>
+<div class="app">
+<header class="top"><div class="logo">ST</div><div><h1>StimTake <span style="color:#80afff">/ Decks</span></h1><div class="muted">Save your setup. Switch themes when your show changes.</div></div><span class="ready">DECK READY</span></header>
+<div class="layout">
+<main class="panel">
+  <div class="head"><div><h2>Current Deck</h2><div class="muted">Built-in holiday decks are protected; create custom decks for your own layouts</div></div><span class="tag" id="currentTag">HALLOWEEN</span></div>
+  <div class="deck-tools">
+    <div class="field"><label for="deckSelect">SWITCH DECK</label><select id="deckSelect"></select></div>
+    <button class="btn primary" id="saveDeck">Save deck</button>
+  </div>
+  <div class="activation-bar" id="activationBar"><div class="activation-copy"><div class="activation-title" id="activationTitle">Click-to-Run Mode: OFF</div><div class="activation-note" id="activationNote">Slots only select for editing until you enable live mode.</div></div><button class="mode-btn" id="clickModeToggle" aria-pressed="false">TURN ON CLICK MODE</button></div>
+  <div class="deck" id="deck"></div>
+  <div class="actions"><button class="btn primary" id="toggleSlot" disabled>Enable click mode first</button><button class="btn" id="stopSlot">Stop selected</button><button class="btn danger" id="stopAll">Stop all</button></div>
+  <hr class="rule">
+  <details class="section accordion selected-slot-accordion">
+    <summary><span><strong>Edit Overlay</strong><span class="muted" id="slotCaption" style="display:block;font-weight:500;margin-top:3px">Slot 01</span></span><span class="tag">EDIT SLOT ＋</span></summary>
+    <div class="accordion-body">
+      <div class="slot-edit">
+        <div class="field"><label for="slotName">DISPLAY NAME</label><input id="slotName" maxlength="48" placeholder="e.g. Reindeer Race"></div>
+        <div class="field"><label for="slotFile">OVERLAY ASSIGNMENT</label><input id="slotFile" placeholder="Import HTML overlay" readonly></div>
+      </div>
+      <div class="actions"><button class="btn" id="saveSlot">Save slot</button><button class="btn" id="importHtml">Import HTML Overlay</button><button class="btn danger" id="deleteOverlay">Delete overlay</button><input id="htmlPicker" type="file" accept=".html,.htm,text/html" hidden></div>
+      <div class="status"><span class="led"></span><span id="message">Halloween deck loaded.</span></div>
+    </div>
+  </details>
+</main>
+<aside class="panel">
+  <details class="section accordion my-decks-accordion" id="myDecksAccordion">
+    <summary><span><strong>My Decks</strong><span class="muted" style="display:block;font-weight:500;margin-top:3px">Federal holidays, seasonal themes, and custom decks</span></span><span class="tag" id="deckCount">4 DECKS</span></summary>
+    <div class="accordion-body">
+      <div class="deck-list" id="deckList"></div>
+      <div class="actions"><button class="btn primary" id="newDeck">＋ New deck</button><button class="btn" id="duplicateDeck">Duplicate</button></div>
+      <details class="section accordion">
+        <summary>Deck actions <span class="muted">Rename or delete current deck</span></summary>
+        <div class="accordion-body"><div class="actions my-deck-actions"><button class="btn" id="renameDeck">Rename current</button><button class="btn danger" id="deleteDeck">Delete current</button></div></div>
+      </details>
+    </div>
+  </details>
+  <details class="section accordion">
+    <summary>Deck backup &amp; restore <span class="muted">Backups and older versions</span></summary>
+    <div class="accordion-body"><div class="actions" style="margin-top:0"><button class="btn primary" id="backupDeck">Back up deck</button><button class="btn" id="restoreDeck">Restore from file</button><input id="restorePicker" type="file" accept=".json,application/json" hidden></div><div class="field" style="margin-top:9px"><label for="recentBackups">RECENT BACKUPS</label><select id="recentBackups"><option value="">No recent backups yet</option></select></div><div class="actions"><button class="btn" id="restoreRecent">Restore selected backup</button><button class="btn danger" id="deleteBackup">Delete selected backup</button><button class="btn" id="updateDeck">Update saved deck</button></div></div>
+  </details>
+  <details class="section accordion">
+    <summary>Help &amp; OBS URLs <span class="muted">Quick guide and copyable links</span></summary>
+    <div class="accordion-body">
+      <p class="tip">With Click-to-Run Mode off, clicking a slot selects it for editing. Turn the mode on to click an assigned slot to start it; click it again to stop it. In Click Mode, red means stopped and green means running. Built-in holiday decks are protected; duplicate one to make an editable custom deck.</p>
+      <div class="field" style="margin-top:10px"><label for="obsSourceUrl">OBS BROWSER SOURCE URL</label><input id="obsSourceUrl" value="http://127.0.0.1:8790/obs.html" readonly></div>
+      <div class="actions" style="margin-top:7px"><button class="btn" data-copy-target="obsSourceUrl">Copy OBS URL</button></div>
+      <div class="field" style="margin-top:10px"><label for="appUrl">STIMTAKE APP / LOCAL SERVER URL</label><input id="appUrl" value="http://127.0.0.1:8790/" readonly></div>
+      <div class="actions" style="margin-top:7px"><button class="btn" data-copy-target="appUrl">Copy app URL</button></div>
+      <p class="tip" style="margin-top:9px">These local URLs work only when the StimTake Rust app is running and serving port 8790. In OBS, add a Browser Source and paste the OBS Browser Source URL. The standalone HTML preview does not start the Rust server.</p>
+      <div class="status" id="copyStatus" role="status"><span class="led"></span><span>Choose Copy to put a URL on your clipboard.</span></div>
+    </div>
+  </details>
+  <details class="section accordion api-panel">
+    <summary>API Manager <span class="muted">Import and manage APIs</span><span class="tag" id="apiCount">0 APIS</span></summary>
+    <div class="accordion-body"><div class="api-grid"><button class="api-import" id="importApi"><span class="api-import-icon">▣</span><span><strong>Import API Package</strong><small>Choose an API ZIP</small></span></button><input id="apiPicker" type="file" accept=".zip,application/zip,application/x-zip-compressed" hidden></div><div class="api-list" id="apiList"><div class="api-empty">No APIs added yet. Import an API ZIP to begin.</div></div><div class="tip" style="margin-top:9px">API keys are optional and only needed for services that require them.</div></div>
+  </details>
+</aside>
+</div>
+<div class="footer-note">Deck switcher preview · save/switch controls work in this page session; native app persistence and real file copying are supplied by StimTake.</div>
+</div>
+<script>
+(()=> {
+// Keep editing controls tucked away on startup for a compact layout.
+document.querySelectorAll(".selected-slot-accordion, #myDecksAccordion").forEach(el => el.open = false);
+const themes = {
+  "Halloween": {emoji:"🎃", slots:[
+    ["Witch's Wheel","01_Halloween_Witchs_Wheel_overlay.html"],["Lucky Dice","02_Halloween_Witchs_Lucky_Dice_overlay.html"],["Pick a Pumpkin","03_Halloween_Pick_A_Pumpkin_overlay.html"],["Crystal Ball","04_Halloween-Crystal-Ball-overlay.html"],["Tarot Draw","05_Halloween-Tarot-Draw-overlay.html"],["Witch's Potion","06_Halloween-Witchs-Potion-overlay.html"],["Spider Drop","07_Halloween-Spider-Drop-overlay.html"],["Bat Race","08_Halloween-Bat-Race-overlay.html"],["Trick or Treat","09_Halloween-Trick-or-Treat-Bag-overlay.html"],["Skull Slots","10_Halloween-Skull-Slots-overlay.html"],["Ghost Hunt","11_Halloween-Ghost-Hunt-overlay.html"],["Graveyard Pick","12_Halloween-Graveyard-Pick-overlay.html"],["Magic 8 Ball","13_Halloween-Magic-8-Ball-overlay.html"],["Candle Challenge","14_Halloween-Candle-Challenge-overlay.html"],["Spell Book","15_Halloween-Spell-Book-overlay.html"],["Black Cat Pick","16_Halloween-Black-Cat-Pick-overlay.html"],["Poison Apple","17_Halloween-Poison-Apple-overlay.html"],["Mystery Coffin","18_Halloween-Mystery-Coffin-overlay.html"],["Pumpkin Slots","19_Halloween-Pumpkin-Slots-overlay.html"],["Final Boss Battle","20_Halloween-Final-Boss-Battle-overlay.html"]]},
+  "Christmas": {emoji:"🎄", slots:[["Reindeer Race",""],["Santa's Lucky Dice",""],["Pick a Present",""],["Christmas Star",""],["Winter Wishes",""],["Elf Workshop",""],["Snowflake Drop",""],["Candy Cane Race",""],["Naughty or Nice",""],["Stocking Slots",""]]},
+  "Thanksgiving": {emoji:"🦃", slots:[["Harvest Wheel",""],["Turkey Dice",""],["Pick a Pumpkin Pie",""],["Golden Cornucopia",""],["Gratitude Cards",""],["Harvest Potion",""],["Leaf Drop",""],["Turkey Trot",""],["Feast or Treat",""],["Harvest Slots",""]]},
+  "Daily Pack": {emoji:"🎲", slots:[["Spin the Wheel","Daily-Pack-01-Spin-The-Wheel-overlay.html"],["Lucky Dice","Daily-Pack-02-Lucky-Dice-overlay.html"],["Mystery Box","Daily-Pack-03-Mystery-Box-overlay.html"],["Pick a Card","Daily-Pack-04-Pick-A-Card-overlay.html"],["Lucky Slots","Daily-Pack-05-Lucky-Slots-overlay.html"],["Time Jackpot","Daily-Pack-06-Time-Jackpot-overlay.html"],["Emoji Race","Daily-Pack-07-Emoji-Race-overlay.html"],["Cup Shuffle","Daily-Pack-08-Cup-Shuffle-Adult-Wins-overlay.html"],["Bullseye Reward","Daily-Pack-09-Bullseye-Reward-Reveal-overlay.html"],["Pick a Gem","Daily-Pack-10-Pick-A-Gem-overlay.html"],["Balloon Pop","Daily-Pack-11-Balloon-Pop-overlay.html"],["Lucky Locker","Daily-Pack-12-Lucky-Locker-overlay.html"],["Mystery Tiles","Daily-Pack-13-Mystery-Tiles-Fixed-overlay.html"],["Rocket Launch","Daily-Pack-14-Rocket-Launch-Adult-overlay.html"],["Treasure Chest","Daily-Pack-15-Treasure-Chest-Final-Top-Reveal-overlay.html"],["Lucky Strike","Daily-Pack-16-Lucky-Strike-Adult-Prizes-overlay.html"],["Lucky Shot","Daily-Pack-17-Lucky-Shot-True-Net-Entry-overlay.html"],["Star Pick","Daily-Pack-18-Star-Pick-Adult-Prizes-overlay.html"],["Mini Race","Daily-Pack-19-Mini-Race-overlay.html"],["Final Showdown","Daily-Pack-20-Final-Showdown-overlay.html"]]}
+,
+  "New Year's Day": {emoji:"🎆", slots:[["Midnight Countdown",""],["New Year Wheel",""],["Lucky Resolution",""],["Firework Reveal",""],["Champagne Pop",""],["Fresh Start Dice",""],["Confetti Drop",""],["Countdown Race",""],["Midnight Mystery",""],["Golden Clock",""],["Resolution Cards",""],["New Year Slots",""],["Sparkler Surprise",""],["Balloon Countdown",""],["Time Capsule",""],["Lucky 2027",""],["Starburst Pick",""],["Midnight Jackpot",""],["Year Ahead",""],["Final Countdown","" ]]},
+  "Martin Luther King Jr. Day": {emoji:"✊🏽", slots:[["Dreams Wheel",""],["Unity Cards",""],["Hope Pick",""],["Community Challenge",""],["Kindness Drop",""],["Dream Big Dice",""],["Peace Puzzle",""],["Unity Race",""],["Service Surprise",""],["Hope Slots","" ]]},
+  "Presidents' Day": {emoji:"🇺🇸", slots:[["Presidential Wheel",""],["Founders Dice",""],["Pick the Leader",""],["White House Mystery",""],["Liberty Drop",""],["History Cards",""],["Eagle Race",""],["Presidential Prize",""],["Patriot Slots",""],["Commander Challenge","" ]]},
+  "Memorial Day": {emoji:"🕊️", slots:[["Remember & Honor",""],["Stars and Stripes Wheel",""],["Honor Cards",""],["Red White Blue Pick",""],["Freedom Drop",""],["Memorial Mystery",""],["Patriot Dice",""],["Summer Kickoff",""],["Stars Race",""],["Honor Slots","" ]]},
+  "Juneteenth": {emoji:"❤️💛💚", slots:[["Freedom Wheel",""],["Juneteenth Journey",""],["Legacy Cards",""],["Red Black Green Pick",""],["Freedom Day Drop",""],["Culture Celebration",""],["Unity Dice",""],["History Mystery",""],["Freedom Race",""],["Celebration Slots","" ]]},
+  "Independence Day": {emoji:"🎆", slots:[["Fireworks Wheel",""],["Liberty Dice",""],["Pick a Star",""],["Patriot Prize",""],["Firecracker Pop",""],["Stars and Stripes",""],["Eagle Flight",""],["Red White Blue Race",""],["Independence Mystery",""],["Liberty Slots","" ]]},
+  "Labor Day": {emoji:"🛠️", slots:[["Labor Day Wheel",""],["Worker Wins",""],["Tools of Fortune",""],["Pick a Prize",""],["Long Weekend Drop",""],["Skill Challenge",""],["Lucky Break Dice",""],["Workday Escape",""],["Victory Lap",""],["Labor Day Slots","" ]]},
+  "Columbus / Indigenous Peoples' Day": {emoji:"🧭", slots:[["Journey Wheel",""],["Discoveries Dice",""],["Culture Cards",""],["Explore the Map",""],["Heritage Drop",""],["Voyage Mystery",""],["World Mosaic",""],["Discovery Race",""],["Traditions Pick",""],["Explorer Slots","" ]]},
+  "Veterans Day": {emoji:"🎖️", slots:[["Veterans Honor Wheel",""],["Service Stars",""],["Honor Cards",""],["Patriot Pick",""],["Thank You Drop",""],["Bravery Dice",""],["Veteran Tribute",""],["Freedom Race",""],["Service Mystery",""],["Honor Slots","" ]]},
+  "Halloween": {emoji:"🎃", slots:[["Witch's Wheel","01_Halloween_Witchs_Wheel_overlay.html"],["Lucky Dice","02_Halloween_Witchs_Lucky_Dice_overlay.html"],["Pick a Pumpkin","03_Halloween_Pick_A_Pumpkin_overlay.html"],["Crystal Ball","04_Halloween-Crystal-Ball-overlay.html"],["Tarot Draw","05_Halloween-Tarot-Draw-overlay.html"],["Witch's Potion","06_Halloween-Witchs-Potion-overlay.html"],["Spider Drop","07_Halloween-Spider-Drop-overlay.html"],["Bat Race","08_Halloween-Bat-Race-overlay.html"],["Trick or Treat","09_Halloween-Trick-or-Treat-Bag-overlay.html"],["Skull Slots","10_Halloween-Skull-Slots-overlay.html"],["Ghost Hunt","11_Halloween-Ghost-Hunt-overlay.html"],["Graveyard Pick","12_Halloween-Graveyard-Pick-overlay.html"],["Magic 8 Ball","13_Halloween-Magic-8-Ball-overlay.html"],["Candle Challenge","14_Halloween-Candle-Challenge-overlay.html"],["Spell Book","15_Halloween-Spell-Book-overlay.html"],["Black Cat Pick","16_Halloween-Black-Cat-Pick-overlay.html"],["Poison Apple","17_Halloween-Poison-Apple-overlay.html"],["Mystery Coffin","18_Halloween-Mystery-Coffin-overlay.html"],["Pumpkin Slots","19_Halloween-Pumpkin-Slots-overlay.html"],["Final Boss Battle","20_Halloween-Final-Boss-Battle-overlay.html"]]},
+  "Thanksgiving": {emoji:"🦃", slots:[["Harvest Wheel",""],["Turkey Dice",""],["Pick a Pumpkin Pie",""],["Golden Cornucopia",""],["Gratitude Cards",""],["Harvest Potion",""],["Leaf Drop",""],["Turkey Trot",""],["Feast or Treat",""],["Harvest Slots","" ]]},
+  "Christmas": {emoji:"🎄", slots:[["Reindeer Race",""],["Santa's Lucky Dice",""],["Pick a Present",""],["Christmas Star",""],["Winter Wishes",""],["Elf Workshop",""],["Snowflake Drop",""],["Candy Cane Race",""],["Naughty or Nice",""],["Stocking Slots","" ]]}
+};
+const icons=["🎛️","🎲","🎁","⭐","✨","🧩","🎯","🏁","🎉","🎰","🔮","💎","🎈","🚀","🧰","🍀","🎯","🌟","🏎️","🏆"];
+const themedIcons={
+  "Halloween":["🧙","🎲","🎃","🔮","🃏","🧪","🕷️","🦇","🍬","💀","👻","🪦","🎱","🕯️","📖","🐈‍⬛","🍎","⚰️","🎰","👹"],
+  "Thanksgiving":["🦃","🎲","🥧","🌽","💛","🧪","🍂","🏃","🍽️","🎰","🍁","🌾","🥕","🧺","🥧","🍗","🌰","🍎","🦊","🏆"],
+  "Christmas":["🦌","🎲","🎁","⭐","❄️","🧝","❄️","🍬","🎅","🧦","🔔","🎄","☃️","🛷","🧸","🍪","🥛","✨","🛷","🎁"],
+  "Daily Pack":["🎡","🎲","📦","🃏","🎰","⏰","🏁","🥤","🎯","💎","🎈","🔐","🧩","🚀","🧰","🍀","🎯","🌟","🏎️","🏆"],
+  "New Year's Day":["🕛","🎡","🍀","🎆","🥂","🎲","🎊","🏁","🎁","🕰️","📝","🎰","🎇","🎈","📦","✨","🌟","🎰","🔮","🎆"],
+  "Martin Luther King Jr. Day":["🎡","🤝","🕊️","🌎","💛","🎲","☮️","🏁","🤲","⭐"],
+  "Presidents' Day":["🇺🇸","🪙","🦅","🏛️","🗽","📜","🦅","🎁","⭐","🎖️"],
+  "Memorial Day":["🕊️","🇺🇸","🎖️","⭐","🕯️","🕊️","🎲","☀️","🏁","🎖️"],
+  "Juneteenth":["❤️","🧭","📜","💚","🎉","🎨","🎲","📚","🏁","🎊"],
+  "Independence Day":["🎆","🎲","⭐","🎁","🧨","🇺🇸","🦅","🏁","🎆","🗽"],
+  "Labor Day":["🎡","🏆","🛠️","🎁","🍃","🧰","🎲","🏖️","🏁","🎰"],
+  "Columbus / Indigenous Peoples' Day":["🧭","🎲","🪶","🗺️","🌿","⛵","🌎","🏁","🧵","🧭"],
+  "Veterans Day":["🎖️","⭐","🎖️","🇺🇸","💌","🎲","🕊️","🏁","🎁","🎖️"]
+};
+function iconForSlot(themeName, slotName, index){
+  const set=themedIcons[themeName]||icons;
+  return set[index%set.length]||"✦";
+}
+
+// Load the authoritative built-in pack manifests from Rust. Each pack must have
+// exactly 20 existing HTML files; built-in slots are populated from those manifests
+// instead of relying on incomplete hard-coded filename lists.
+const PACK_EMOJI={Halloween:"🎃",Daily:"🎲",Winter:"❄️",Fall:"🍂",Spring:"🌷",Summer:"☀️",Easter:"🐣",Valentine:"💘",St:"🍀",New:"🎆",Juneteenth:"❤️💛💚",Veterans:"🎖️",Presidents:"🇺🇸",Memorial:"🕊️",Independence:"🎆",Labor:"🛠️",Indigenous:"🧭",MLK:"✊🏽"};
+function packEmoji(pack){const category=String(pack.category||pack.name||pack.folder||"");for(const [k,v] of Object.entries(PACK_EMOJI))if(category.toLowerCase().includes(k.toLowerCase()))return v;return "🎛️";}
+function packDeckId(pack){return "builtin-pack-"+String(pack.id||pack.folder||pack.name).toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
+function manifestSlots(pack){return pack.slots.slice().sort((a,b)=>(a.slot||0)-(b.slot||0)).map((s,i)=>({id:i+1,name:String(s.name||`Overlay ${String(i+1).padStart(2,"0")}`).replace(/^StimTake\s+/i,""),file:String(pack.folder||"")+"/"+String(s.file),icon:iconForSlot(pack.name||pack.folder,s.name||"",i),active:false}));}
+async function hydrateBuiltInPacks(){
+ try{
+  const response=await fetch("/api/packs",{cache:"no-store"});if(!response.ok)throw Error("HTTP "+response.status);
+  const packs=await response.json();if(!Array.isArray(packs))throw Error("Invalid pack catalog");
+  const aliases=[
+   [/^Daily Pack$/i,"Daily Pack"],[/^Halloween/i,"Halloween"],[/New.?Years/i,"New Year's Day"],[/MLK/i,"Martin Luther King Jr. Day"],[/Presidents/i,"Presidents' Day"],[/Memorial/i,"Memorial Day"],[/Juneteenth/i,"Juneteenth"],[/Independence/i,"Independence Day"],[/Labor/i,"Labor Day"],[/Indigenous/i,"Columbus / Indigenous Peoples' Day"],[/Veterans/i,"Veterans Day"],[/Valentine/i,"Valentine's Pack"],[/Easter/i,"Easter Pack"],[/^Fall/i,"Fall Pack"],[/^Spring/i,"Spring Pack"],[/^Summer/i,"Summer Pack"],[/St.?Patricks/i,"St. Patrick's Pack"],[/^Winter/i,"Winter Pack"]
+  ];
+  for(const pack of packs){
+   if(!pack||!Array.isArray(pack.slots)||pack.slots.length!==20)continue;
+   const names=pack.slots.slice().sort((a,b)=>(a.slot||0)-(b.slot||0));
+   if(names.some(s=>!s.file||!s.name))continue;
+   let targetName=(pack.name||pack.folder||"Built-in Pack");
+   for(const [pattern,name] of aliases){if(pattern.test(String(pack.name||"")+" "+String(pack.folder||""))){targetName=name;break;}}
+   let deck=decks.find(d=>d.protected&&(d.name===targetName||d.id===packDeckId(pack)));
+   if(!deck){deck={id:packDeckId(pack),name:targetName,emoji:packEmoji(pack),protected:true,slots:manifestSlots(pack)};decks.push(deck);}
+   else {deck.protected=true;deck.name=targetName;deck.emoji=packEmoji(pack);deck.slots=manifestSlots(pack);}
+  }
+  // Remove any obsolete empty placeholder slots in built-in decks only by refreshing
+  // every matched deck above; preserve all user-created decks unchanged.
+  for(const d of decks){if(d.protected&&!d.slots.every(s=>s.file)){const alias=aliases.find(([re])=>re.test(d.name));if(alias){const p=packs.find(x=>alias[0].test(String(x.name||"")+" "+String(x.folder||"")));if(p)d.slots=manifestSlots(p);}}}
+  // Do not present hard-coded holiday placeholders as built-in decks when no full
+  // 20-file pack exists for them. User-created decks are never removed here.
+  decks=decks.filter(d=>!(d.protected&&d.slots.every(s=>!s.file)&&["Thanksgiving","Christmas"].includes(d.name)));
+  if(!decks.some(d=>d.id===currentId))currentId=decks[0]?.id||currentId;
+  saveState();
+ }catch(e){console.warn("StimTake built-in pack catalog unavailable; existing deck state retained.",e);}
+}
+
+function makeSlots(theme){
+  const themeName=Object.keys(themes).find(name=>themes[name]===theme)||"";
+  const data=theme.slots||[];
+  return Array.from({length:20},(_,i)=>({id:i+1,name:data[i]?.[0]||`Overlay ${String(i+1).padStart(2,"0")}`,file:data[i]?.[1]||"",icon:iconForSlot(themeName,data[i]?.[0]||"",i),active:false}));
+}
+const BUILTIN_NAMES = new Set(Object.keys(themes));
+let decks = Object.entries(themes).map(([name,t])=>({id:"builtin-"+name.toLowerCase().replace(/[^a-z0-9]+/g,"-"),name,emoji:t.emoji,protected:true,slots:makeSlots(t)}));
+
+let currentId=decks[0].id, selectedSlot=0, clickMode=false;
+const STORE_KEY="stimtake.deckManager.v1", BACKUP_KEY="stimtake.deckBackups.v1";
+function safeRead(key,fallback){try{const v=JSON.parse(localStorage.getItem(key)||"null");return v??fallback}catch{return fallback}}
+function saveState(){try{localStorage.setItem(STORE_KEY,JSON.stringify({decks,currentId,selectedSlot}));}catch{}}
+function backupRecord(deck,label){const records=safeRead(BACKUP_KEY,[]);records.unshift({id:crypto.randomUUID(),label:label||deck.name,createdAt:new Date().toISOString(),deck:JSON.parse(JSON.stringify({...deck,slots:deck.slots.map(s=>({...s,active:false}))}))});localStorage.setItem(BACKUP_KEY,JSON.stringify(records.slice(0,12)));renderRecentBackups();}
+function downloadJson(obj,filename){const blob=new Blob([JSON.stringify(obj,null,2)],{type:"application/json"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=filename;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+function validDeck(d){return d&&typeof d.name==="string"&&Array.isArray(d.slots)&&d.slots.length===20&&d.slots.every(s=>s&&typeof s.name==="string")}
+function renderRecentBackups(){const sel=$("recentBackups");if(!sel)return;const old=sel.value,records=safeRead(BACKUP_KEY,[]);sel.replaceChildren();if(!records.length){const o=document.createElement("option");o.value="";o.textContent="No recent backups yet";sel.append(o);return;}records.forEach(r=>{const o=document.createElement("option");o.value=r.id;o.textContent=r.label+" — "+new Date(r.createdAt).toLocaleString();sel.append(o)});if(records.some(r=>r.id===old))sel.value=old;}
+// Restore the most recently saved deck set when the preview is reopened.
+const stored=safeRead(STORE_KEY,null);if(stored&&Array.isArray(stored.decks)&&stored.decks.length){
+  decks=stored.decks;
+  // Restore any missing built-in decks, and make every built-in deck non-deletable/non-renamable.
+  for(const [name,t] of Object.entries(themes)){
+    let existing=decks.find(d=>d.name===name || d.id==="builtin-"+name.toLowerCase().replace(/[^a-z0-9]+/g,"-"));
+    if(!existing){existing={id:"builtin-"+name.toLowerCase().replace(/[^a-z0-9]+/g,"-"),name,emoji:t.emoji,protected:true,slots:makeSlots(t)};decks.push(existing);}
+    existing.protected=true; existing.name=name; existing.emoji=t.emoji;
+    if(!Array.isArray(existing.slots)||!existing.slots.length)existing.slots=makeSlots(t);
+    while(existing.slots.length<20){const i=existing.slots.length;existing.slots.push({id:i+1,name:t.slots[i]?.[0]||`Overlay ${String(i+1).padStart(2,"0")}`,file:t.slots[i]?.[1]||"",icon:icons[i%icons.length],active:false});}
+    existing.slots=existing.slots.slice(0,20).map((slot,i)=>({...slot,id:i+1,icon:iconForSlot(name,slot.name,i),active:false}));
+  }
+  currentId=decks.some(d=>d.id===stored.currentId)?stored.currentId:decks[0].id;selectedSlot=Math.min(19,Math.max(0,Number(stored.selectedSlot)||0));decks.forEach(d=>d.slots.forEach(s=>s.active=false));
+}
+const $=id=>document.getElementById(id);
+const current=()=>decks.find(d=>d.id===currentId);
+let backendActiveCount=0, backendMaxActive=5, backendPressure="green";
+async function reconcileBackendState(){try{const r=await fetch("/api/state",{cache:"no-store"});if(!r.ok)return;const st=await r.json();backendActiveCount=Array.isArray(st.instances)?st.instances.length:backendActiveCount;backendMaxActive=st.limits?.maxActiveOverlays||5;backendPressure=st.memory?.pressure||backendPressure;for(const d of decks){for(const slot of d.slots){slot.active=(st.instances||[]).some(x=>x.deck_id===d.id&&x.slot===slot.id&&x.file===(slot.file||""));}}saveState();renderSlots();}catch(_){}}
+async function pushCurrentDeck(){
+ const payload={deckId:current().id,deckName:current().name,slots:current().slots.map((s,i)=>({name:s.name,file:s.file||"",active:!!s.active,layer:10+i,duration_secs:15}))};
+ const r=await fetch("/api/slots",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+ const result=await r.json().catch(()=>({}));
+ if(!r.ok){const err=new Error(result.error||("StimTake backend rejected slot state (HTTP "+r.status+")"));err.status=r.status;throw err;}
+ backendActiveCount=result.activeCount??backendActiveCount;backendMaxActive=result.maxActive??backendMaxActive;backendPressure=result.pressure||backendPressure;
+ return result;
+}
+async function pushCurrentDeckQuietly(){try{await pushCurrentDeck();renderSlots();return true;}catch(e){if(e.status===409){say(e.message);await reconcileBackendState();}else say("Backend connection failed. Keep StimTake running and retry: "+e.message);return false;}}
+function say(t){$("message").textContent=t}
+function renderDeckSelect(){
+  const select=$("deckSelect"), old=select.value;select.replaceChildren();
+  decks.forEach(d=>{const o=document.createElement("option");o.value=d.id;o.textContent=d.name;select.append(o)});
+  select.value=decks.some(d=>d.id===old)?old:currentId;
+  $("deckCount").textContent=decks.length+" DECK"+(decks.length===1?"":"S");
+}
+function renderDeckList(){
+  const root=$("deckList");root.replaceChildren();
+  decks.forEach(d=>{const b=document.createElement("button");b.className="deck-card"+(d.id===currentId?" selected":"");
+    const emo=document.createElement("span");emo.className="deck-emoji";emo.textContent=d.emoji||"🎛️";
+    const info=document.createElement("span");info.className="deck-info";const n=document.createElement("span");n.className="deck-name";n.textContent=d.name;const m=document.createElement("span");m.className="deck-meta";m.textContent=(d.protected?"BUILT-IN · LOCKED · ":"")+d.slots.filter(s=>s.file).length+" assigned overlays";info.append(n,m);
+    const check=document.createElement("span");check.className="deck-count";check.textContent=d.id===currentId?"ACTIVE":"OPEN";
+    b.append(emo,info,check);b.onclick=()=>switchDeck(d.id);root.append(b);
+  });
+}
+function renderSlots(){
+ const d=current();$("deck").replaceChildren();$("deck").classList.toggle("click-mode-on",clickMode);
+ d.slots.forEach((s,i)=>{const b=document.createElement("button");b.className="slot"+(s.active?" active":"")+(i===selectedSlot?" sel":"");
+ b.innerHTML=`<span class="slot-top"><span>${String(s.id).padStart(2,"0")}</span><span>${s.icon||"✦"}</span></span><span class="slot-name"></span><span class="slot-state">${s.active?"ACTIVE":s.file?"ASSIGNED":"EMPTY"}</span>`;
+ b.querySelector(".slot-name").textContent=s.name;b.setAttribute("aria-pressed",s.active?"true":"false");b.title=clickMode?(s.active?"Click to stop this overlay":"Click to run this overlay"):"Click to select for editing; turn on Click-to-Run Mode to trigger overlays";b.onclick=async()=>{selectedSlot=i;if(clickMode&&s.file){s.active=!s.active;renderSlots();syncSlot();if(await pushCurrentDeckQuietly())say(s.name+(s.active?" activated in OBS.":" stopped."));}else{renderSlots();syncSlot();say(clickMode&&!s.file?"Import an HTML overlay into this slot first.":s.name+" selected for editing.");}};$("deck").append(b);});
+ $("currentTag").textContent=d.name.toUpperCase();$("toggleSlot").textContent=!clickMode?"Enable click mode first":(d.slots[selectedSlot].active?"Stop selected":"Run selected");$("toggleSlot").disabled=!clickMode||!d.slots[selectedSlot].file||(!d.slots[selectedSlot].active&&(backendActiveCount>=backendMaxActive||backendPressure==="red"));
+ $("activationBar").classList.toggle("enabled",clickMode);$("activationTitle").textContent="Click-to-Run Mode: "+(clickMode?"ON":"OFF");$("activationNote").textContent=clickMode?`Active overlays: ${backendActiveCount}/${backendMaxActive}. Memory: ${String(backendPressure).toUpperCase()}. ${backendPressure==="red"?"New activations paused by memory pressure.":backendActiveCount>=backendMaxActive?"Stop an overlay before starting another.":"Click assigned slots to start or stop overlays."}`:"Slots only select for editing until you enable live mode.";$("clickModeToggle").textContent=clickMode?"TURN OFF CLICK MODE":"TURN ON CLICK MODE";$("clickModeToggle").setAttribute("aria-pressed",clickMode?"true":"false");
+}
+function syncSlot(){const s=current().slots[selectedSlot];$("slotCaption").textContent="Slot "+String(s.id).padStart(2,"0");$("slotName").value=s.name;$("slotFile").value=s.file||"";}
+function renderAll(){renderDeckSelect();renderDeckList();renderSlots();syncSlot();saveState();renderRecentBackups();}
+let deckSwitchInProgress=false;
+async function switchDeck(id){
+ if(id===currentId||deckSwitchInProgress)return;
+ deckSwitchInProgress=true;
+ const previousClickMode=clickMode;
+ currentId=id;selectedSlot=0;
+ // Render the selected deck immediately, then wait for its complete slot map to
+ // reach the Rust backend before allowing another mode-toggle request. This
+ // prevents a fast click-mode toggle from racing the deck initialization POST.
+ renderAll();
+ $("clickModeToggle").disabled=true;
+ $("deckSelect").disabled=true;
+ try{
+   const synced=await pushCurrentDeckQuietly();
+   if(synced){await reconcileBackendState();renderAll();}
+   say("Switched to "+current().name+(synced?". Deck cards synchronized.":". Backend sync failed; keep StimTake running and retry.")+(previousClickMode?" Click-to-Run Mode remains ON.":" Click-to-Run Mode remains OFF."));
+ }finally{
+   deckSwitchInProgress=false;
+   $("clickModeToggle").disabled=false;
+   $("deckSelect").disabled=false;
+ }
+}
+$("deckSelect").onchange=()=>switchDeck($("deckSelect").value);
+$("saveDeck").onclick=async()=>{saveState();backupRecord(current(),"Saved — "+current().name);renderAll();await pushCurrentDeckQuietly();say(current().name+" saved and synced to StimTake.");};
+$("updateDeck").onclick=async()=>{saveState();backupRecord(current(),"Updated — "+current().name);renderAll();await pushCurrentDeckQuietly();say(current().name+" updated. A restore point was saved and slots synced.");};
+$("backupDeck").onclick=()=>{const copy=JSON.parse(JSON.stringify({...current(),slots:current().slots.map(s=>({...s,active:false}))}));backupRecord(copy,"Backup — "+copy.name);downloadJson({format:"StimTakeDeck",version:1,deck:copy},"StimTake-"+copy.name.replace(/[^a-z0-9_-]+/gi,"-")+"-backup.json");say("Deck backup downloaded and added to recent backups.");};
+$("restoreDeck").onclick=()=>$("restorePicker").click();
+$("restorePicker").onchange=async e=>{const f=e.target.files[0];if(!f)return;try{const raw=JSON.parse(await f.text());const d=raw.deck||raw;if(!validDeck(d))throw Error("This file is not a valid StimTake deck backup.");backupRecord(current(),"Before restore — "+current().name);const restored=JSON.parse(JSON.stringify(d));restored.id=crypto.randomUUID();restored.name=restored.name||"Restored Deck";restored.slots=restored.slots.map((slot,i)=>({...slot,id:i+1,active:false}));decks.push(restored);currentId=restored.id;selectedSlot=0;renderAll();say("Restored "+restored.name+" from backup as a separate deck.");}catch(err){alert(err.message||"Could not restore that file.");}e.target.value="";};
+$("restoreRecent").onclick=()=>{const r=safeRead(BACKUP_KEY,[]).find(x=>x.id===$("recentBackups").value);if(!r){say("Choose a recent backup first.");return;}if(!confirm("Restore "+r.label+" as a new deck? Your current deck will remain unchanged."))return;const restored=JSON.parse(JSON.stringify(r.deck));restored.id=crypto.randomUUID();restored.name=(restored.name||"Restored Deck")+" (Restored)";restored.slots.forEach(s=>s.active=false);decks.push(restored);currentId=restored.id;selectedSlot=0;renderAll();say("Restored recent backup as "+restored.name+".");};
+$("deleteBackup").onclick=()=>{const id=$("recentBackups").value;const records=safeRead(BACKUP_KEY,[]);const r=records.find(x=>x.id===id);if(!r){say("Choose a recent backup to delete first.");return;}if(!confirm("Delete the backup 2"+r.label+"2? This cannot be undone. Downloaded JSON files will not be deleted."))return;localStorage.setItem(BACKUP_KEY,JSON.stringify(records.filter(x=>x.id!==id)));renderRecentBackups();say("Deleted recent backup: "+r.label+".");};
+$("clickModeToggle").onclick=async()=>{clickMode=!clickMode;if(!clickMode){current().slots.forEach(s=>s.active=false);}renderSlots();await pushCurrentDeckQuietly();say("Click-to-Run Mode "+(clickMode?"enabled.":"disabled.")+" Backend state synced.");};
+$("toggleSlot").onclick=async()=>{if(!clickMode){say("Turn on Click-to-Run Mode first.");return;}const s=current().slots[selectedSlot];if(!s.file){say("Import an HTML overlay into this slot first.");return;}s.active=!s.active;renderSlots();if(await pushCurrentDeckQuietly())say(s.name+(s.active?" activated in OBS.":" stopped."));};
+$("stopSlot").onclick=async()=>{current().slots[selectedSlot].active=false;renderSlots();await pushCurrentDeckQuietly();say(current().slots[selectedSlot].name+" stopped.");};
+$("stopAll").onclick=async()=>{current().slots.forEach(s=>s.active=false);renderSlots();await pushCurrentDeckQuietly();say("Stopped all overlays in "+current().name+".");};
+$("saveSlot").onclick=async()=>{const s=current().slots[selectedSlot];const n=$("slotName").value.trim();if(n)s.name=n;renderAll();await pushCurrentDeckQuietly();say("Slot saved and synced to StimTake in "+current().name+".");};
+$("importHtml").onclick=()=>$("htmlPicker").click();
+$("deleteOverlay").onclick=()=>{
+ const s=current().slots[selectedSlot];
+ if(!s.file){say("This slot is already empty.");return;}
+ const preset=current().protected;
+ const message=preset
+  ? "Remove this overlay from the selected slot? The built-in preset file will not be deleted. Save the deck to keep your slot changes."
+  : "Remove the overlay assignment from this slot? The original HTML file on your computer will not be deleted.";
+ if(!confirm(message))return;
+ const old=s.file;s.file="";s.active=false;renderAll();pushCurrentDeckQuietly();
+ say("Overlay assignment cleared from Slot "+String(selectedSlot+1).padStart(2,"0")+". Original file was kept."+(preset?" Save the deck to keep this change.":""));
+};
+$("htmlPicker").onchange=async e=>{const f=e.target.files[0];if(!f)return;const slotNumber=selectedSlot+1;try{const response=await fetch("/api/import/"+slotNumber+"?name="+encodeURIComponent(f.name),{method:"POST",headers:{"Content-Type":"application/octet-stream"},body:f});if(!response.ok)throw new Error("HTTP "+response.status);current().slots[selectedSlot].file=f.name;current().slots[selectedSlot].active=false;renderAll();await pushCurrentDeck();say("Imported "+f.name+" into Slot "+String(slotNumber).padStart(2,"0")+" and saved it to StimTake.");}catch(err){say("Import failed: "+err.message+". Keep StimTake running and try again.");}finally{e.target.value="";}};
+function slugEmoji(name){return name.toLowerCase().includes("christ")?"🎄":name.toLowerCase().includes("thank")?"🦃":name.toLowerCase().includes("hallow")?"🎃":name.toLowerCase().includes("daily")?"🎲":"🎛️";}
+function newDeck(name,copyFrom=null){
+ const base=copyFrom?JSON.parse(JSON.stringify(copyFrom.slots)):Array.from({length:20},(_,i)=>({id:i+1,name:`Overlay ${String(i+1).padStart(2,"0")}`,file:"",icon:"✦",active:false}));
+ base.forEach(s=>s.active=false);const d={id:crypto.randomUUID(),name,emoji:slugEmoji(name),slots:base};decks.push(d);currentId=d.id;selectedSlot=0;renderAll();say("Created "+name+".");
+}
+$("newDeck").onclick=()=>{const name=prompt("Name your new deck:", "My New Deck");if(!name||!name.trim())return;newDeck(name.trim());};
+$("duplicateDeck").onclick=()=>{const name=prompt("Name the copied deck:",current().name+" Copy");if(!name||!name.trim())return;newDeck(name.trim(),current());};
+$("renameDeck").onclick=()=>{if(current().protected){say("Built-in holiday decks cannot be renamed.");return;}const name=prompt("Rename this deck:",current().name);if(!name||!name.trim())return;current().name=name.trim();current().emoji=slugEmoji(name);renderAll();say("Deck renamed.");};
+$("deleteDeck").onclick=()=>{if(current().protected){alert("Cannot delete preset decks.");say("Cannot delete preset decks.");return;}if(decks.length<=1){say("Keep at least one deck.");return;}if(!confirm("Delete the deck “"+current().name+"”?"))return;decks=decks.filter(d=>d.id!==currentId);currentId=decks[0].id;selectedSlot=0;renderAll();say("Deck deleted.");};
+document.querySelectorAll("[data-preset]").forEach(b=>b.onclick=()=>{const name=b.dataset.preset;const t=themes[name];if(decks.some(d=>d.name.toLowerCase()===name.toLowerCase())){switchDeck(decks.find(d=>d.name.toLowerCase()===name.toLowerCase()).id);say(name+" built-in deck selected (protected). ");return;}if(t){if(["Thanksgiving","Christmas"].includes(name)){say(name+" does not have a complete built-in 20-overlay pack in this build yet.");return;}const d={id:crypto.randomUUID(),name,emoji:t.emoji,slots:makeSlots(t)};decks.push(d);currentId=d.id;selectedSlot=0;renderAll();say("Created seasonal starter: "+name+".");}});
+
+
+// Copy local StimTake/OBS URLs from the Help section.
+document.querySelectorAll("[data-copy-target]").forEach(button=>button.addEventListener("click",async()=>{
+ const input=$(button.dataset.copyTarget); const value=input.value;
+ try {
+  if(navigator.clipboard && window.isSecureContext) await navigator.clipboard.writeText(value);
+  else { input.focus(); input.select(); const ok=document.execCommand("copy"); if(!ok) throw new Error("copy unavailable"); }
+  $("copyStatus").querySelector("span:last-child").textContent="Copied: "+value;
+ } catch(e) {
+  input.focus(); input.select();
+  $("copyStatus").querySelector("span:last-child").textContent="Select the highlighted URL and copy it manually (Ctrl+C).";
+ }
+}));
+
+const apiPackages=[];
+function renderApis(){
+ const root=$("apiList");root.replaceChildren();$("apiCount").textContent=apiPackages.length+" API"+(apiPackages.length===1?"":"S");
+ if(!apiPackages.length){const empty=document.createElement("div");empty.className="api-empty";empty.textContent="No APIs added yet. Import an API ZIP to begin.";root.append(empty);return;}
+ apiPackages.forEach((api,i)=>{
+  const card=document.createElement("div");card.className="api-card";
+  const head=document.createElement("div");head.className="api-card-head";
+  const info=document.createElement("div");info.className="api-card-info";
+  const name=document.createElement("div");name.className="api-card-name";name.textContent=api.name;
+  const file=document.createElement("div");file.className="api-card-file";file.textContent=api.file;
+  info.append(name,file);
+  const state=document.createElement("span");state.className="api-status "+api.state;state.textContent=api.state.toUpperCase();
+  head.append(info,state);card.append(head);
+  const buttons=document.createElement("div");buttons.className="api-buttons";
+  [["Start","running"],["Pause","paused"],["Stop","stopped"]].forEach(([label,value])=>{
+   const b=document.createElement("button");b.className="btn"+(value==="running"?" primary":"");b.textContent=label;
+   b.onclick=()=>{api.state=value;renderApis();say(api.name+" marked "+value+". (Preview only)");};buttons.append(b);
+  });
+  const remove=document.createElement("button");remove.className="btn danger";remove.textContent="Remove";remove.onclick=()=>{apiPackages.splice(i,1);renderApis();say(api.name+" removed from preview.");};buttons.append(remove);card.append(buttons);
+  const row=document.createElement("div");row.className="api-key";
+  const key=document.createElement("input");key.type="password";key.placeholder="API key (optional)";key.value=api.key||"";key.setAttribute("aria-label","Optional API key for "+api.name);key.onchange=()=>api.key=key.value;
+  const label=document.createElement("label");const show=document.createElement("input");show.type="checkbox";show.onchange=()=>key.type=show.checked?"text":"password";label.append(show,document.createTextNode("Show"));
+  row.append(key,label);card.append(row);
+  const hint=document.createElement("div");hint.className="api-hint";hint.textContent="Only set a key if this API requires one.";card.append(hint);
+  root.append(card);
+ });
+}
+$("importApi").onclick=()=>$("apiPicker").click();
+$("apiPicker").onchange=e=>{const f=e.target.files[0];if(!f)return;const name=f.name.replace(/\.zip$/i,"");apiPackages.push({name,file:f.name,state:"stopped",key:""});renderApis();say("Added "+name+" to the API list preview.");e.target.value="";};
+
+(async()=>{await hydrateBuiltInPacks();renderAll();renderRecentBackups();renderApis();await pushCurrentDeckQuietly();})();
+})();
+</script></body></html>

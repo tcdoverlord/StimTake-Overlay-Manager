@@ -1,0 +1,18 @@
+StimTake Windows Memory Monitor - Candidate Status
+
+Implemented in src/memory_monitor.rs:
+- Windows GlobalMemoryStatusEx binding using MEMORYSTATUSEX and dwLength.
+- Windows GetProcessMemoryInfo binding for StimTake process working-set bytes.
+- Two-second sampling and three-consecutive-sample pressure-state hysteresis.
+- Green/Yellow/Red classification with proposed 68/75/78/85 thresholds and available-RAM guards.
+- GET /api/memory and memory object included in GET /api/state.
+- Errors preserve last successful sample and do not touch overlay activation.
+- Unit tests for classification thresholds.
+
+Not verified in this environment:
+- Rust compilation against windows 0.62.
+- Running Windows API calls on target Windows PC.
+- Cache manager enforcement / actual LRU eviction integration.
+- OBS live-show stress behavior and process-memory trend validation.
+
+Important: This package adds actual telemetry bindings and pressure reporting. It does not claim that cache eviction has been integrated into every cache path or that active OBS rendering can be guaranteed against OS-level failure.

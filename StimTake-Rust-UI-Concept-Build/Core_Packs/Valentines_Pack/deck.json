@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "valentines_pack",
+  "name": "Valentine's Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Heart Spin",
+      "file": "01_Heart_Spin_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Cupid's Pick",
+      "file": "02_Cupid_s_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Love Letter Reveal",
+      "file": "03_Love_Letter_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Rose Petal Drop",
+      "file": "04_Rose_Petal_Drop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Sweetheart Dice",
+      "file": "05_Sweetheart_Dice_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Candy Heart Hunt",
+      "file": "06_Candy_Heart_Hunt_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Secret Admirer",
+      "file": "07_Secret_Admirer_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Love Potion",
+      "file": "08_Love_Potion_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Heartbeat Race",
+      "file": "09_Heartbeat_Race_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Ribbon Reveal",
+      "file": "10_Ribbon_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Cupid's Arrow",
+      "file": "11_Cupid_s_Arrow_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Romance Roulette",
+      "file": "12_Romance_Roulette_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Blush Bonus",
+      "file": "13_Blush_Bonus_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Sweet Surprise",
+      "file": "14_Sweet_Surprise_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Heart Lock",
+      "file": "15_Heart_Lock_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Rose Garden",
+      "file": "16_Rose_Garden_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Love Note",
+      "file": "17_Love_Note_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Pair of Hearts",
+      "file": "18_Pair_of_Hearts_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Heart Jackpot",
+      "file": "19_Heart_Jackpot_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Valentine Finale",
+      "file": "20_Valentine_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

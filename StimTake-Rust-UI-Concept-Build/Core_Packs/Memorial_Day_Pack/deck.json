@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "memorial_day_pack",
+  "name": "Memorial Day Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Honor Stars",
+      "file": "01_Honor_Stars_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Remembrance Reveal",
+      "file": "02_Remembrance_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Flag Tribute",
+      "file": "03_Flag_Tribute_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Liberty Lantern",
+      "file": "04_Liberty_Lantern_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Service Medal",
+      "file": "05_Service_Medal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Memorial Garden",
+      "file": "06_Memorial_Garden_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Courage Wheel",
+      "file": "07_Courage_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Fallen Heroes",
+      "file": "08_Fallen_Heroes_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Freedom Banner",
+      "file": "09_Freedom_Banner_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Patriot's Pick",
+      "file": "10_Patriot_s_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Blue Star Tribute",
+      "file": "11_Blue_Star_Tribute_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Golden Poppy",
+      "file": "12_Golden_Poppy_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Honor Guard",
+      "file": "13_Honor_Guard_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Legacy Lights",
+      "file": "14_Legacy_Lights_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Brave Hearts",
+      "file": "15_Brave_Hearts_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Unity Banner",
+      "file": "16_Unity_Banner_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Remember Together",
+      "file": "17_Remember_Together_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Stars of Honor",
+      "file": "18_Stars_of_Honor_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Gratitude Reveal",
+      "file": "19_Gratitude_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Memorial Finale",
+      "file": "20_Memorial_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

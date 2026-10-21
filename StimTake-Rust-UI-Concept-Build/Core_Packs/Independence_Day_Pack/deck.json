@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "independence_day_pack",
+  "name": "Independence Day Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Firework Wheel",
+      "file": "01_Firework_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Star Spangled Pick",
+      "file": "02_Star_Spangled_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Liberty Bell",
+      "file": "03_Liberty_Bell_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Rocket Pop",
+      "file": "04_Rocket_Pop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Red White Blue",
+      "file": "05_Red_White_Blue_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Patriot Dice",
+      "file": "06_Patriot_Dice_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Flag Wave",
+      "file": "07_Flag_Wave_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Independence Treasure",
+      "file": "08_Independence_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Sparkler Drop",
+      "file": "09_Sparkler_Drop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Eagle Flight",
+      "file": "10_Eagle_Flight_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Freedom Stars",
+      "file": "11_Freedom_Stars_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Parade Float",
+      "file": "12_Parade_Float_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Picnic Prize",
+      "file": "13_Picnic_Prize_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Summer Fireworks",
+      "file": "14_Summer_Fireworks_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Liberty Lights",
+      "file": "15_Liberty_Lights_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "American Dream",
+      "file": "16_American_Dream_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Star Burst",
+      "file": "17_Star_Burst_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Firecracker Dash",
+      "file": "18_Firecracker_Dash_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Grand Finale",
+      "file": "19_Grand_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Fourth of July Finale",
+      "file": "20_Fourth_of_July_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

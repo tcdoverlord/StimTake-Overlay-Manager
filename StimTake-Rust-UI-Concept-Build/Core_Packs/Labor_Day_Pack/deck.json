@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "labor_day_pack",
+  "name": "Labor Day Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Toolbox Treasure",
+      "file": "01_Toolbox_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Teamwork Wheel",
+      "file": "02_Teamwork_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Builder's Pick",
+      "file": "03_Builder_s_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Golden Wrench",
+      "file": "04_Golden_Wrench_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Craftsman Challenge",
+      "file": "05_Craftsman_Challenge_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Workday Jackpot",
+      "file": "06_Workday_Jackpot_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Team Spirit",
+      "file": "07_Team_Spirit_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Skill Stars",
+      "file": "08_Skill_Stars_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Workshop Mystery",
+      "file": "09_Workshop_Mystery_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Hard Work Reward",
+      "file": "10_Hard_Work_Reward_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Gear Spin",
+      "file": "11_Gear_Spin_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Blueprint Reveal",
+      "file": "12_Blueprint_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Hands On",
+      "file": "13_Hands_On_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Safety Star",
+      "file": "14_Safety_Star_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Trade Tools",
+      "file": "15_Trade_Tools_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Teamwork Puzzle",
+      "file": "16_Teamwork_Puzzle_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Builder's Bonus",
+      "file": "17_Builder_s_Bonus_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Work of Art",
+      "file": "18_Work_of_Art_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Achievement Wheel",
+      "file": "19_Achievement_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Labor Day Finale",
+      "file": "20_Labor_Day_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

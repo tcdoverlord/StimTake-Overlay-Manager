@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "indigenous_peoples_day_pack",
+  "name": "Indigenous Peoples' Day Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Heritage Wheel",
+      "file": "01_Heritage_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Story Keeper",
+      "file": "02_Story_Keeper_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Community Roots",
+      "file": "03_Community_Roots_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Wisdom Reveal",
+      "file": "04_Wisdom_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Earth Connection",
+      "file": "05_Earth_Connection_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Tradition Treasure",
+      "file": "06_Tradition_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Nature's Path",
+      "file": "07_Nature_s_Path_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Respectful Journey",
+      "file": "08_Respectful_Journey_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Culture Stars",
+      "file": "09_Culture_Stars_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Seven Generations",
+      "file": "10_Seven_Generations_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Land and Sky",
+      "file": "11_Land_and_Sky_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Storytelling Circle",
+      "file": "12_Storytelling_Circle_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Heritage Pick",
+      "file": "13_Heritage_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Living Traditions",
+      "file": "14_Living_Traditions_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Earth's Gifts",
+      "file": "15_Earth_s_Gifts_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Community Wisdom",
+      "file": "16_Community_Wisdom_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Roots and Wings",
+      "file": "17_Roots_and_Wings_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Honor the Past",
+      "file": "18_Honor_the_Past_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Future Generations",
+      "file": "19_Future_Generations_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Heritage Finale",
+      "file": "20_Heritage_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

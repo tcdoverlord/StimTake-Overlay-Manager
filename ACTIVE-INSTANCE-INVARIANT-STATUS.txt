@@ -1,0 +1,37 @@
+StimTake Active-Instance Invariant Candidate
+
+Implemented in this source candidate:
+- ActiveOverlayInstance records have stable unique instance IDs independent of the current deck slot view.
+- UI sends deckId with each slot sync.
+- A deck switch does not implicitly stop instances owned by the previous deck.
+- OBS compositor keys iframe elements by instance_id and removes only instances absent from backend state.
+- DELETE /api/instances/{instance_id} stops only that instance, independent of selected deck.
+- ActiveOverlayRegistry records resource IDs required by live instances and reference-checks shared resources.
+- CacheManager centralizes can_evict() and routes LRU, RED-pressure, expiration, deck-switch, and manual eviction through that gate.
+- Unit tests cover all eviction paths, shared-resource references, LRU order, and HOT/live protections.
+- Centralized `runtime_limits::MAX_ACTIVE_INSTANCES = 5` is the single backend default.
+- Activation-policy tests cover five allowed, sixth denied, stop-one-then-allow, deck-switch count retention, RED denial of new activation, repeated instances of the same overlay, atomic multi-activation preflight, and rejection without mutating the pure preflight input.
+- Runtime smoke test exercises two concurrent instances, deck switching, and stopping one without stopping the other.
+
+Important limitation:
+The inspected source did not contain a real browser-resource warm-cache/LRU eviction engine. CacheManager currently provides the enforceable policy model and unit-test target, while the active-instance registry is wired into the backend/compositor. This does not yet perform actual Chromium memory eviction or prove browser-level resource dependency tracking. Imported files are not deleted by CacheManager.
+
+Not verified here:
+- Rust compilation and cargo test (Cargo/rustc unavailable in this environment).
+- Windows API execution.
+- Runtime PowerShell smoke test against a running server.
+- Visual OBS rendering/stress behavior.
+
+Static checks performed for this packaged candidate:
+- UI inline JavaScript syntax: PASS (Node.js 22.16.0).
+- OBS compositor JavaScript syntax: PASS (Node.js 22.16.0).
+- Source-marker checks for active registry, eviction gate, all five cleanup entry points, deck ID sync, independent instance compositor, and stop endpoint: PASS.
+- Rust cargo test/build: NOT RUN (Cargo/rustc unavailable in the preparation environment).
+- Runtime smoke script: authored/updated, NOT RUN against a live server.
+
+LOCAL SERVER STARTUP GATE (2026-10-20)
+- Server bind and listener-thread creation must succeed before SERVER_READY is reported.
+- /api/state exposes serverStatus: STARTING, SERVER_READY, or SERVER_FAILED.
+- Bind/start failure reports the address 127.0.0.1:8790 and the underlying error in the app diagnostic.
+- Runtime smoke test checks /health, /obs.html, /api/state, /api/memory and requires SERVER_READY.
+- Live OBS rendering remains a separate manual verification step.

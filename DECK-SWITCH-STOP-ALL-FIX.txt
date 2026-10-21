@@ -1,0 +1,17 @@
+StimTake Deck Switch Stop-All Fix Candidate
+
+Behavior change:
+- Selecting a different deck is a hard overlay-session reset.
+- All active overlay instances from the outgoing deck are removed immediately from backend state.
+- Active-resource registrations are unregistered so old overlay resources are no longer protected as live.
+- Expiration slots are cleared.
+- The incoming deck's cards load inactive, even if its saved payload contains active=true.
+- Users can activate any incoming-deck card normally after the switch.
+- The OBS compositor receives an empty instance list during the switch and removes old frames.
+
+Scope deliberately limited to deck-switch behavior. Overlay links/manifests and deck card loading are retained. No queue, memory-pressure, concurrency-limit, or Stop semantics were intentionally changed outside the switch reset.
+
+Validation status:
+- Source-level inspection completed.
+- Runtime smoke test updated to assert that switching decks stops all overlays and that a new-deck card can be activated afterward.
+- This package has not been compiled or run against live OBS in this environment. Rebuild on Windows and run TEST-STIMTAKE-RUNTIME.ps1, then visually verify OBS compositor behavior before promoting it to MAIN.

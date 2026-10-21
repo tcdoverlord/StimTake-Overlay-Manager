@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "st_patricks_pack",
+  "name": "St. Patrick's Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Lucky Clover Spin",
+      "file": "01_Lucky_Clover_Spin_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Pot of Gold",
+      "file": "02_Pot_of_Gold_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Rainbow Chase",
+      "file": "03_Rainbow_Chase_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Leprechaun's Pick",
+      "file": "04_Leprechaun_s_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Green Gold Rush",
+      "file": "05_Green_Gold_Rush_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Shamrock Shuffle",
+      "file": "06_Shamrock_Shuffle_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Lucky Coin Drop",
+      "file": "07_Lucky_Coin_Drop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Emerald Reveal",
+      "file": "08_Emerald_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Four Leaf Find",
+      "file": "09_Four_Leaf_Find_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Gold Coin Toss",
+      "file": "10_Gold_Coin_Toss_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Rainbow Road",
+      "file": "11_Rainbow_Road_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Celtic Knot",
+      "file": "12_Celtic_Knot_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Lucky Dice",
+      "file": "13_Lucky_Dice_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Green Lantern",
+      "file": "14_Green_Lantern_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "Hidden Treasure",
+      "file": "15_Hidden_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Horseshoe Hunt",
+      "file": "16_Horseshoe_Hunt_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Clover Cascade",
+      "file": "17_Clover_Cascade_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Golden Trail",
+      "file": "18_Golden_Trail_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Luck of the Draw",
+      "file": "19_Luck_of_the_Draw_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Lucky Finale",
+      "file": "20_Lucky_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "halloween_2026",
+  "name": "Halloween 2026 Pack",
+  "type": "OVERLAY_PACK",
+  "category": "Halloween",
+  "version": "1.0.0",
+  "overlayCount": 20,
+  "slots": [
+    {
+      "slot": 1,
+      "name": "StimTake Halloween Witch Wheel",
+      "file": "01_Halloween_Witchs_Wheel_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "StimTake Halloween Dice Game",
+      "file": "02_Halloween_Witchs_Lucky_Dice_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "StimTake Pick a Pumpkin",
+      "file": "03_Halloween_Pick_A_Pumpkin_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "StimTake Halloween Crystal Ball",
+      "file": "04_Halloween-Crystal-Ball-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "StimTake Halloween Tarot Draw",
+      "file": "05_Halloween-Tarot-Draw-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "StimTake Witch's Potion",
+      "file": "06_Halloween-Witchs-Potion-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "StimTake Halloween Spider Drop",
+      "file": "07_Halloween-Spider-Drop-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "StimTake Halloween Bat Race",
+      "file": "08_Halloween-Bat-Race-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "StimTake Trick-or-Treat Bag",
+      "file": "09_Halloween-Trick-or-Treat-Bag-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "StimTake Halloween Skull Slots",
+      "file": "10_Halloween-Skull-Slots-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "StimTake Halloween Ghost Hunt",
+      "file": "11_Halloween-Ghost-Hunt-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "StimTake Halloween Graveyard Pick",
+      "file": "12_Halloween-Graveyard-Pick-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "StimTake Gothic Magic 8-Ball",
+      "file": "13_Halloween-Magic-8-Ball-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "StimTake Halloween Candle Challenge",
+      "file": "14_Halloween-Candle-Challenge-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "StimTake Halloween Spell Book",
+      "file": "15_Halloween-Spell-Book-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "StimTake Halloween Black Cat Pick",
+      "file": "16_Halloween-Black-Cat-Pick-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "StimTake Halloween Poison Apple",
+      "file": "17_Halloween-Poison-Apple-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "StimTake Halloween Mystery Coffin",
+      "file": "18_Halloween-Mystery-Coffin-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "StimTake Halloween Pumpkin Slots",
+      "file": "19_Halloween-Pumpkin-Slots-overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "StimTake Halloween Final Boss Battle",
+      "file": "20_Halloween-Final-Boss-Battle-overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Pack-specific manifest for the supplied Halloween.zip. Preserves the included HTML overlay filenames and slot order. Import or assign overlays individually; this metadata does not modify overlay behavior."
+}

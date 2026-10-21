@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "spring_pack",
+  "name": "Spring Pack",
+  "type": "OVERLAY_PACK",
+  "slots": [
+    {
+      "slot": 1,
+      "name": "Bloom Burst",
+      "file": "01_Bloom_Burst_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 2,
+      "name": "Rainy Day Bonus",
+      "file": "02_Rainy_Day_Bonus_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 3,
+      "name": "Garden Treasure",
+      "file": "03_Garden_Treasure_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 4,
+      "name": "Butterfly Flutter",
+      "file": "04_Butterfly_Flutter_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 5,
+      "name": "Rainbow Reveal",
+      "file": "05_Rainbow_Reveal_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 6,
+      "name": "Bunny Hop",
+      "file": "06_Bunny_Hop_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 7,
+      "name": "Petal Pick",
+      "file": "07_Petal_Pick_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 8,
+      "name": "Lucky Ladybug",
+      "file": "08_Lucky_Ladybug_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 9,
+      "name": "Spring Cleaning",
+      "file": "09_Spring_Cleaning_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 10,
+      "name": "Flower Power",
+      "file": "10_Flower_Power_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 11,
+      "name": "Egg Hunt",
+      "file": "11_Egg_Hunt_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 12,
+      "name": "Puddle Splash",
+      "file": "12_Puddle_Splash_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 13,
+      "name": "Birdsong Bonus",
+      "file": "13_Birdsong_Bonus_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 14,
+      "name": "Seedling Surprise",
+      "file": "14_Seedling_Surprise_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 15,
+      "name": "April Showers",
+      "file": "15_April_Showers_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 16,
+      "name": "Garden Gnome",
+      "file": "16_Garden_Gnome_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 17,
+      "name": "Daisy Dash",
+      "file": "17_Daisy_Dash_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 18,
+      "name": "Picnic Basket",
+      "file": "18_Picnic_Basket_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 19,
+      "name": "Spring Fever",
+      "file": "19_Spring_Fever_overlay.html",
+      "type": "HTML_OVERLAY"
+    },
+    {
+      "slot": 20,
+      "name": "Bloom Finale",
+      "file": "20_Bloom_Finale_overlay.html",
+      "type": "HTML_OVERLAY"
+    }
+  ],
+  "notes": "Starter themed HTML overlays. Assign/import into StimTake slots; no existing preset deck files are modified."
+}
