@@ -1,26 +1,16 @@
-<div align="center">
+ <div align="center">
 
-  # StimTake — Chaturbate Overlay Manager for OBS
+# StimTake — Chaturbate Overlay Manager for OBS
 
-  **A Windows toolkit for interactive OBS overlays, tip tracking, and customizable action packs.**
+**A Windows toolkit for interactive OBS overlays, tip tracking, and customizable action packs.**
 
-  ![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078d4?style=for-the-badge)
-  ![OBS](https://img.shields.io/badge/Integration-OBS%20Studio-7b61ff?style=for-the-badge)
-  ![Actions](https://img.shields.io/badge/Interactive%20Actions-20-00b8d9?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078d4?style=for-the-badge)
+![OBS](https://img.shields.io/badge/Integration-OBS%20Studio-7b61ff?style=for-the-badge)
+![Actions](https://img.shields.io/badge/Interactive%20Actions-20-00b8d9?style=for-the-badge)
 
-  **[🌐 Project Website](https://tcdoverlord.github.io/StimTake-Overlay-Manager/)** · **[📦 GitHub Repository](https://github.com/tcdoverlord/StimTake-Overlay-Manager)** · **[🐛 Report an Issue](https://github.com/tcdoverlord/StimTake-Overlay-Manager/issues)**
+**[🌐 Project Website](https://tcdoverlord.github.io/StimTake-Overlay-Manager/)** · **[📦 GitHub Repository](https://github.com/tcdoverlord/StimTake-Overlay-Manager)** · **[🐛 Report an Issue](https://github.com/tcdoverlord/StimTake-Overlay-Manager/issues)**
 
 </div>
-
----
-
-<p align="center">
-  <a href="https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/blob/main/assets/daily-pack-banner.png">
-    <img src="./assets/daily-pack-banner.png" alt="StimTake Daily Pack — 20 everyday interactive actions for OBS" width="100%">
-  </a>
-</p>
-
----
 
 ## Table of Contents
 
@@ -41,153 +31,165 @@
 
 ## Project Overview
 
-StimTake is a Windows toolkit for Chaturbate creators who want to add interactive actions and customizable visual experiences to OBS Studio. The project includes a desktop interface for managing action slots and decks, plus supporting tools and overlays.
+StimTake is a Windows toolkit for Chaturbate creators who want to add interactive actions and customizable visual experiences to OBS Studio. The project includes tools for managing action slots and decks, along with supporting overlays and resources.
 
-The repository's current project direction includes a 20-slot action manager, customizable decks, overlay editing, and integration workflows intended to make interactive show elements easier to organize.
+The project includes a 20-slot action manager, customizable decks, overlay editing, and OBS integration workflows. Exact capabilities depend on the installed build and content.
 
-StimTake is actively evolving. Features and packaging can vary by build. Check the current source, release notes, and included documentation when confirming whether a specific capability is available in a given version.
+StimTake is actively evolving. Check the current source, release notes, and included documentation to confirm the capabilities of a specific version.
 
 ## Action Packs
 
 ### Halloween 2026
 
 <p align="center">
-  <a href="https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/blob/main/assets/stimtake-promo-banner.png">
-    <img src="./assets/stimtake-promo-banner.png" alt="StimTake Halloween 2026 action pack" width="100%">
+  <a href="https://github.com/tcdoverlord/StimTake-Overlay-Manager/blob/main/assets/stimtake-promo-banner.png">
+    <img src="./assets/stimtake-promo-banner.png" alt="StimTake seasonal promotional banner" width="100%">
   </a>
 </p>
 
-A seasonal set of spooky themed interactions. The available actions and artwork depend on the installed Halloween pack version.
+A seasonal, spooky-themed promotional pack. Available actions depend on the installed pack version.
 
-A set of everyday interactive actions, including wheel spins, dice, cards, mystery prizes, races, and other game-style overlays. The included pack and installed build determine the available actions.
+### Daily Pack
 
-> **Image setup:** Keep `daily-pack-banner.png` and `halloween-2026-banner.png` in the repository's `assets/` folder. If the Halloween banner has a different filename in your current project, update both the relative `src` and GitHub `href` above to match the committed filename.
+<p align="center">
+  <a href="https://github.com/tcdoverlord/StimTake-Overlay-Manager/blob/main/assets/daily-pack-banner.png">
+    <img src="./assets/daily-pack-banner.png" alt="StimTake Daily Pack banner" width="100%">
+  </a>
+</p>
+
+A collection of everyday interactive actions, including game-style overlays. The installed build determines which actions are available.
 
 ## Features
 
-- **20 action slots** for organizing interactive show actions.
-- **Deck switching** to keep different sets of actions organized.
+- **20 action slots** for organizing interactive actions.
+- **Deck switching** to keep different action sets organized.
 - **Custom decks** for personal layouts and show themes.
 - **Overlay editing and assignment** for supported slots.
-- **OBS integration workflows** for using supported overlays as browser sources.
+- **OBS integration workflows** for supported browser-source overlays.
 - **Pack-based customization** for seasonal and everyday themes.
 
-Feature availability depends on the current build and installed content. The README does not imply that every overlay, event source, or integration is automatically configured on every system.
+Feature availability depends on the current build and installed content. Not every overlay, event source, or integration is necessarily configured automatically.
 
 ## Requirements
 
-Before using StimTake, prepare:
-
 - A supported Windows 10 or Windows 11 system.
-- The StimTake build or installer appropriate to your release.
-- OBS Studio for streaming and displaying supported overlays.
-- Any required browser-source URLs, local services, or pack files described by the build's documentation.
-- Internet access when downloading the repository, releases, or optional content.
+- A StimTake build or installer.
+- OBS Studio for displaying supported overlays.
+- Any required browser-source URLs, local services, or pack files documented for the installed build.
+- Internet access to download repository content or releases.
 
-System requirements vary with the specific release and with the OBS scenes, overlays, and other applications running at the same time.
+Requirements can vary by release.
 
 ## Quick Start
 
 ### 1. Get StimTake
 
-Download the latest available release from the repository's [Releases page](https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/releases), or clone the repository:
+Visit the [Releases page](https://github.com/tcdoverlord/StimTake-Overlay-Manager/releases) to check for published releases, or clone the repository:
 
 ```powershell
-git clone https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker.git
-cd Chaturbate-OBS-Tip-Tracker
+git clone https://github.com/tcdoverlord/StimTake-Overlay-Manager.git
+cd StimTake-Overlay-Manager
 ```
+
+Review the included documentation and verify the version before running executables or scripts.
 
 ### 2. Launch the application
 
-If using a packaged Windows release, run the supplied installer or executable and follow the instructions included with that release.
+For a packaged Windows release, run the supplied installer or executable and follow the instructions included with that release.
 
-If working from source, follow the build instructions and scripts included in the repository. Build prerequisites can differ between versions.
+For source builds, follow the repository's build instructions and scripts.
 
 ### 3. Choose an action pack
 
-Open the Decks or action-pack interface and select the deck you want to use, such as **Daily Pack** or **Halloween 2026**, if that pack is installed in your build.
+Open the deck or action-pack interface and select an available pack, such as Daily Pack or Halloween 2026, if installed in your build.
 
 ### 4. Configure and test an overlay
 
-Select an action slot, review its overlay assignment and settings, and test it before using it live. Enable live/click mode only when you're ready to run actions.
+Select an action slot, review its overlay assignment and settings, and test it before using it live.
 
 ### 5. Add supported overlays to OBS
 
-Use the URL or integration method documented by your installed build. Test the source in OBS before going live. A standalone HTML preview may not start the local application service by itself.
+Use the URL or integration method documented by your installed build. A standalone HTML preview may not start the local application service by itself.
 
 ## Using StimTake with OBS
 
 1. Open OBS Studio and select the scene where the overlay should appear.
-2. Add a **Browser Source** when the selected overlay uses a browser-source workflow.
-3. Use the local URL or file path provided by the running StimTake build and its documentation.
-4. Set the source dimensions as appropriate for your scene.
+2. Add a **Browser Source** if the selected overlay supports that workflow.
+3. Enter the local URL or file path documented by your installed build.
+4. Set the source dimensions for your scene.
 5. Test the overlay and triggering workflow before streaming.
 
-Exact URLs, ports, and source settings can vary by build. Use the values displayed by the running application instead of assuming a default endpoint.
+URLs, ports, and source settings can vary by build. Use the values provided by the running application rather than assuming a default endpoint.
 
 ## Project Images
 
-The website's image pack includes screenshots and promotional assets for documenting the project. The website HTML uses relative image paths so the page and its assets can be hosted together.
+The repository's `assets/` folder contains these images:
 
-For images displayed in this README, commit the relevant files into the repository. Relative paths such as `./assets/daily-pack-banner.png` work when the image exists at that location in the repository.
+- `daily-pack-banner.png`
+- `stimtake-promo-banner.png`
+- `real-decks-dashboard.png`
+- `real-obs-browser-source.png`
+- `windows-stimtake-search.png`
+
+Keep these files in `assets/` with the same filenames and capitalization so the README and website can display them correctly.
 
 ## Troubleshooting
 
 ### The application does not launch
 
-- Check the release's included requirements and instructions.
-- Confirm that you extracted or installed the full package.
+- Check the release's requirements and instructions.
+- Confirm that you installed or extracted the complete package.
 - Run the executable from its expected location.
-- Review any console output or error message before reinstalling.
+- Review any console output or error messages.
 
 ### An action or overlay does not appear
 
 - Confirm the correct deck and slot are selected.
 - Check that an overlay is assigned to the slot.
-- Confirm the relevant pack is installed and supported by the current build.
-- Test the overlay before using it in a live scene.
+- Confirm the relevant pack is installed and supported.
+- Test the overlay before using it live.
 
 ### OBS Browser Source is blank
 
-- Verify that the StimTake service or application required by the overlay is running.
-- Confirm the URL or file path matches the instructions from your installed build.
+- Verify that the required StimTake application or service is running.
+- Confirm that the URL or file path matches the installed build's documentation.
 - Refresh the Browser Source and review application output for errors.
-- Remember that opening a standalone HTML preview does not necessarily start any local backend service.
+- Remember that opening an HTML preview does not necessarily start a local backend service.
 
 ### A pack or image is missing
 
-- Confirm the pack was extracted or imported as described by its instructions.
-- Check file paths and capitalization.
-- For README and website images, confirm that the asset is committed to GitHub at the same path used in the Markdown or HTML.
+- Confirm the pack was installed or imported correctly.
+- Check filenames, paths, and capitalization.
+- Confirm the relevant asset is committed to GitHub at the referenced location.
 
 ## Security and Privacy
 
-- Download releases from the official repository whenever possible.
-- Review scripts before running them, especially when using development builds.
-- Do not commit API keys, credentials, private configuration files, or personal data.
-- Test integrations and event-triggered actions before relying on them during a live show.
-- Keep OBS, Windows, and project dependencies updated.
+- Prefer downloads from the official repository.
+- Review scripts before running them, especially development builds.
+- Do not commit credentials, API keys, private configuration files, or personal data.
+- Test integrations and event-triggered actions before relying on them live.
+- Keep Windows, OBS, and project dependencies updated.
 
 ## Development and Contributions
 
 Bug reports, documentation improvements, reproducible tests, and focused code contributions are welcome.
 
-When reporting an issue, include the StimTake version, Windows version, relevant error output, and steps to reproduce the behavior. Remove personal information, tokens, and other secrets from logs before posting.
+When reporting a problem, include the StimTake version, Windows version, relevant error output, and steps to reproduce it. Remove credentials and personal information from logs before posting.
 
-- [Open an issue](https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/issues)
-- [View pull requests](https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/pulls)
+- [Open an issue](https://github.com/tcdoverlord/StimTake-Overlay-Manager/issues)
+- [View pull requests](https://github.com/tcdoverlord/StimTake-Overlay-Manager/pulls)
 
 ## Project Links
 
-- **Repository:** https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker
-- **Releases:** https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/releases
-- **Issues:** https://github.com/tcdoverlord/Chaturbate-OBS-Tip-Tracker/issues
-- **Project website:** https://tcdoverlord.github.io/Chaturbate-OBS-Tip-Tracker/
+- **Repository:** https://github.com/tcdoverlord/StimTake-Overlay-Manager
+- **Releases:** https://github.com/tcdoverlord/StimTake-Overlay-Manager/releases
+- **Issues:** https://github.com/tcdoverlord/StimTake-Overlay-Manager/issues
+- **Project website:** https://tcdoverlord.github.io/StimTake-Overlay-Manager/
 - **Maintainer:** https://github.com/tcdoverlord
 
 ## License and Attribution
 
-Review the license files and notices in the repository and any included dependencies before redistributing modified builds or bundled software. Do not assume that every component uses the same license.
+Review the license files and notices in the repository and included dependencies before redistributing modified builds or bundled software. Do not assume that every component uses the same license.
 
 ---
 
